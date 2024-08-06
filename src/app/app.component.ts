@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgOptimizedImage } from '@angular/common'
-import { HeaderComponent } from "./pages/header/header/header.component";
+import { HeaderComponent } from './components/header/header/header.component';
+
 
 @Component({
   selector: 'app-root',
