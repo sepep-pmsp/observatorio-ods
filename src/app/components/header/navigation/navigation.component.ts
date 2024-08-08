@@ -1,4 +1,5 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-navigation',
@@ -9,22 +10,31 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
   offset: number = 0;
+  isBrowser: boolean;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+  }
 
   ngOnInit(): void {
-    const nomeQualquer = document.querySelector('.list') as HTMLElement;
-    if (nomeQualquer) {
-      this.offset = nomeQualquer.offsetTop;
+    if (this.isBrowser) { 
+      const nomeQualquer = document.querySelector('.list') as HTMLElement;
+      if (nomeQualquer) {
+        this.offset = nomeQualquer.offsetTop;
+      }
     }
   }
 
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
-    const nomeQualquer = document.querySelector('.list') as HTMLElement;
-    if (nomeQualquer) {
-      if (window.scrollY >= this.offset) {
-        nomeQualquer.classList.add('sticky');
-      } else {
-        nomeQualquer.classList.remove('sticky');
+    if (this.isBrowser) { 
+      const nomeQualquer = document.querySelector('.list') as HTMLElement;
+      if (nomeQualquer) {
+        if (window.scrollY >= this.offset) {
+          nomeQualquer.classList.add('sticky');
+        } else {
+          nomeQualquer.classList.remove('sticky');
+        }
       }
     }
   }
