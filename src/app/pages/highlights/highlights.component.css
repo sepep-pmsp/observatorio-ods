@@ -1,0 +1,67 @@
+.news-card {
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1rem;
+    gap: 0.5rem;
+    flex-direction: column;
+}
+
+.display-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-highlights {
+    background-color: #3F3F3F;
+    color: var(--White);
+    gap: 1rem;
+    margin: 1.5rem;
+    width: 100%;
+    max-width: 100rem;
+    border-radius: 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    margin-left: 29rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+/* Para telas grandes */
+@media (min-width: 1200px) {
+    .title-highlights {
+        width: 85%;
+    }
+}
+
+/* Para telas médias */
+@media (max-width: 1199px) {
+    .title-highlights {
+        width: 54rem;
+        margin: 0;
+    }
+}
+
+/* Para telas pequenas */
+@media (max-width: 768px) {
+    .title-highlights {
+        width: 40rem;
+        margin: 0;
+    }
+}
+
+/* Para telas muito pequenas */
+@media (max-width: 480px) {
+    .title-highlights {
+        width: 80%;
+        padding: 0.5rem;
+        margin: 0;
+    }
+    h2{
+        font-size: 1rem
+    }
+}

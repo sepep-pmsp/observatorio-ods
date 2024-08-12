@@ -1,1 +1,13 @@
 <router-outlet></router-outlet>
+
+<div class="title-highlights">destaques</div>
+
+<div class="search-highlights">pesquisa</div>
+
+<div class="news-card">
+    <div class="display-card">
+        <div class="highlights">
+            <app-highlight-item *ngFor="let highlight of highlights" [highlight]="highlight"></app-highlight-item>
+          </div>
+    </div>
+</div>
