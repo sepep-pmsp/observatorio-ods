@@ -11,9 +11,14 @@
             </label>
             <div class="list">
                 <ul class="other-list">
+                    <li *ngIf="navigationService.isNotHome()" class="list-contente">
+                        <h6 class="animation-hover"><a [routerLink]="''">Voltar ao início</a></h6>
+                        <div id="horizontal-line"></div>
+                    </li>
+                    
                     <li class="list-contente"><h6 class="animation-hover">Agenda 2030</h6></li>
                     <div id="horizontal-line"></div>
-                    <li class="list-contente"><h6 class="animation-hover"><a [routerLink]="'/Destaques'">Destaques</a></h6></li>
+                    <li class="list-contente"><h6 class="animation-hover"><a [routerLink]="'/destaque'">Destaques</a></h6></li>
                     <div id="horizontal-line"></div>
                     <li class="list-contente"><h6 class="animation-hover">Sobre a ODS</h6></li>
                     <div id="horizontal-line"></div>
