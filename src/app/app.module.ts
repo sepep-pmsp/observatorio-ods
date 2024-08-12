@@ -1,26 +1,24 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header/header.component';
-import { NewsComponent } from './pages/news/news.component';
-
-
+import { HomeComponent } from './components/home/home.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { NewsComponent } from './components/news/news.component';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    BrowserModule, 
-    AppRoutingModule, 
-    HeaderComponent,
-    HttpClientModule,
+  declarations: [
     AppComponent,
+    HomeComponent,
+    NavigationComponent,
     NewsComponent
   ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
   providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
