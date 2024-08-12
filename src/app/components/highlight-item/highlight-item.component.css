@@ -1,0 +1,133 @@
+.card {
+    width: 100rem;
+    background-color: #EFEFEF;
+    box-shadow: 4px 7px 11px 1px #7070706c;
+    border: 1px solid transparent;
+    border-radius: 2rem;
+    margin: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.content {
+    padding: 0.6rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+}
+
+.image {
+    object-fit: cover;
+    border-radius: 2rem;
+    width: 32rem; 
+    overflow: hidden;
+}
+
+.image-card{
+    width: 22rem;
+    height: 16rem;
+    object-fit: cover; 
+}
+
+.title {
+    color: #111827;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+}
+
+.desc {
+    margin-top: 0.5rem;
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin: 1.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 2376px) and (min-width: 1175px) {
+    .news-card {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-right: 15rem; 
+        width: 68rem;
+    }
+    .card {
+        flex: 1 1 calc(50% - 2rem); /* Ajuste a largura dos cards para que não invadam o menu */
+    }
+}
+
+@media (max-width: 1200px) {
+    .card {
+        flex: 1 1 100%; /* Dois cards por linha */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%; /* Um card por linha em telas menores */
+        max-width: 184px;
+    }
+}
+
+
+.btn-highlights {
+    display: inline-block;
+    width: 55rem;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #3F3F3F;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+   }
+   
+   .btn-highlights::before,
+   .btn-highlights::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+   }
+   
+   .btn-highlights::before {
+    left: -10px;
+    background: #3d3d3d;
+   }
+   
+   .btn-highlights::after {
+    right: -10px;
+    background: #313131;
+   }
+   
+   .btn-highlights:hover::before,
+   .btn-highlights:hover::after {
+    width: 52%;
+   }
+   
+   .btn-highlights:hover .btn-span-highlights {
+    color: #ececec;
+    transition: 0.3s;
+   }
+   
+   .btn-highlights .btn-span-highlights {
+    color: #000000;
+    font-size: 20px;
+    transition: all 0.3s ease-in;
+   }
