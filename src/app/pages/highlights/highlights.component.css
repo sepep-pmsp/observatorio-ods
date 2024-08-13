@@ -26,7 +26,6 @@
   max-width: 100rem;
   border-radius: 1rem;
   padding: 0.5rem 0.5rem 0.5rem 2rem;
-  margin-left: 29rem;
   text-transform: uppercase;
   font-size: 2rem;
 }
@@ -73,7 +72,6 @@
   max-width: 100rem;
   border-radius: 1rem;
   padding: 0.5rem 0.5rem 0.5rem 2rem;
-  margin-left: 29rem;
   text-transform: uppercase;
   font-size: 2rem;
 }
@@ -114,7 +112,7 @@ textarea:focus, input:focus, select:focus {
     align-items: flex-end;
     align-content: center;
     flex-wrap: nowrap;
-    padding: 0 0.5rem 0 0;
+    padding: 0.1rem 0.5rem 0 0;
 }
 
 
