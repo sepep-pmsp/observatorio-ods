@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { NewsComponent } from './components/news/news.component';
 import { HighlightsComponent } from './pages/highlights/highlights.component';
+import { HighlightItemComponent } from './components/highlight-item/highlight-item.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,13 @@ import { HighlightsComponent } from './pages/highlights/highlights.component';
     HomeComponent,
     NavigationComponent,
     NewsComponent,
-    HighlightsComponent
+    HighlightsComponent,
+    HighlightItemComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
