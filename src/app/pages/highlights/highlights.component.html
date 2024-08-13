@@ -2,12 +2,36 @@
 
 <div class="title-highlights">destaques</div>
 
-<div class="search-highlights">pesquisa</div>
+<div class="search-highlights">
+    <button class="search__button">
+        <i class="fa-solid fa-magnifying-glass fa-2x" style="color: #646464;"></i>
+    </button>
+    <input type="text" class="search__input" placeholder="Pesquisa">
+</div>
 
 <div class="news-card">
     <div class="display-card">
-        <div class="highlights">
-            <app-highlight-item *ngFor="let highlight of highlights" [highlight]="highlight"></app-highlight-item>
-          </div>
+        <div *ngFor="let highlight of paginatedHighlights">
+            <app-highlight-item [highlight]="highlight"></app-highlight-item>
+        </div>
     </div>
+</div>
+
+<div class="pagination">
+    <button (click)="previousPage()" [disabled]="currentPage === 1" class="btn-previuspage">
+        <span class="arrow">
+            <i class="fa-solid fa-arrow-left">
+
+            </i>
+        </span>
+    </button>
+
+    <span class="ppage"> <p class="ppage">Página</p><p>{{ currentPage }}</p></span>
+
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages" class="btn-nextpage">
+        <span class="arrow">
+            <i class="fa-solid fa-arrow-right-long">
+            </i>
+        </span>
+    </button>
 </div>

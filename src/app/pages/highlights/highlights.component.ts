@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-highlights',
   templateUrl: './highlights.component.html',
@@ -8,40 +9,149 @@ import { Component } from '@angular/core';
 export class HighlightsComponent {
   highlights = [
     {
-      imageUrl: 'https://natosafe.com.br/wp-content/uploads/2023/05/objetivos-de-desenvolvimento-susentavel.png',
-      title: 'Os Objetivos de Desenvolvimento Sustentável no Brasil',
-      description: 'Os Objetivos de Desenvolvimento Sustentável são um apelo global à ação para acabar com a pobreza, proteger o meio ambiente e o clima e garantir que as pessoas, em todos os lugares, possam desfrutar de paz e de prosperidade.',
-      link: 'https://brasil.un.org/pt-br/sdgs#:~:text=Os%20Objetivos%20de%20Desenvolvimento%20Sustent%C3%A1vel%20s%C3%A3o%20um%20apelo%20global%20%C3%A0,de%20paz%20e%20de%20prosperidade.'
+      "imageUrl": "https://natosafe.com.br/wp-content/uploads/2023/05/objetivos-de-desenvolvimento-susentavel.png",
+      "title": "São Paulo avança na implementação dos ODS",
+      "description": "A Prefeitura de São Paulo anunciou novos projetos que visam a implementação de políticas sustentáveis em consonância com os ODS.",
+      "link": "https://www.saopaulo.sp.gov.br/noticias/2024/08/sao-paulo-avanca-ods/"
     },
     {
-      imageUrl: 'https://smastr16.blob.core.windows.net/portaleducacaoambiental/sites/201/2023/09/ods-quadrado2-1024x1004.jpg',
-      title: 'O que são os ODS e o que você tem a ver com isso?',
-      description: 'A Organização das Nações Unidas – ONU, no ano de 2015, lançou o desafio aos seus 193 Estados-membros, incluindo o Brasil, de uma nova agenda de desenvolvimento sustentável para os próximos 15 anos, a Agenda 2030, formada pelos chamados 17 Objetivos de Desenvolvimento Sustentável (ODS)',
-      link: 'https://semil.sp.gov.br/educacaoambiental/2023/09/o-que-sao-os-ods-e-o-que-voce-tem-a-ver-com-isso/'
+      "imageUrl": "https://natosafe.com.br/wp-content/uploads/2023/05/objetivos-de-desenvolvimento-susentavel.png",
+      "title": "Virada ODS 2024 traz programação diversificada",
+      "description": "A 3ª edição da Virada ODS contará com palestras, oficinas e atividades culturais em São Paulo, visando a conscientização sobre os Objetivos de Desenvolvimento Sustentável.",
+      "link": "https://viradaodssp.sp.gov.br/2024/08/programacao-virada-ods/"
     },
     {
-      imageUrl: 'https://www.estrategiaods.org.br/wp-content/uploads/2020/09/estrategia-ods-logo.png',
-      title: 'O que são os ODS?',
-      description: 'Os Objetivos de Desenvolvimento Sustentável (ODS) são uma agenda mundial adotada durante a Cúpula das Nações Unidas sobre o Desenvolvimento Sustentável em setembro de 2015, composta por 17 objetivos e 169 metas a serem atingidos até 2030.',
-      link: 'https://www.estrategiaods.org.br/o-que-sao-os-ods/'
+      "imageUrl": "https://cdn.awsli.com.br/2500x2500/2298/2298079/produto/153815267/adesivo-brasao-prefeitura-de-sao-paulo-md-998-1-hlbpsh.jpg",
+      "title": "Governo de SP adota novas metas de sustentabilidade",
+      "description": "O Governo de São Paulo anunciou novas metas para alcançar os ODS até 2030, focando em educação, saúde e meio ambiente.",
+      "link": "https://www.saopaulo.sp.gov.br/noticias/2024/08/governo-sp-metas-sustentabilidade/"
     },
     {
-      imageUrl: 'https://viradaodssp.sp.gov.br/wp-content/uploads/2024/03/Logo-Virada-ODS_Cor-1-1024x631.png',
-      title: 'Prefeitura de São Paulo anuncia a 3ª Edição da Virada ODS com apoio da ONU',
-      description: 'Evento busca popularizar os Objetivos de Desenvolvimento Sustentável (ODS) e traz shows, palestras e ações de conscientização acerca da sustentabilidade',
-      link: 'https://viradaodssp.sp.gov.br/2024/06/13/prefeitura-de-sao-paulo-anuncia-a-3a-edicao-da-virada-ods-com-apoio-da-onu/'
+      "imageUrl": "https://natosafe.com.br/wp-content/uploads/2023/05/objetivos-de-desenvolvimento-susentavel.png",
+      "title": "São Paulo e ONU fortalecem parceria para alcançar os ODS",
+      "description": "A Prefeitura de São Paulo e a ONU firmaram um novo acordo para fortalecer a implementação dos ODS na cidade.",
+      "link": "https://www.onu.org.br/2024/08/sp-onu-parceria-ods/"
     },
     {
-      imageUrl: 'https://cdn.awsli.com.br/2500x2500/2298/2298079/produto/153815267/adesivo-brasao-prefeitura-de-sao-paulo-md-998-1-hlbpsh.jpg',
-      title: 'Ações do Governo de SP contra o coronavírus atendem a 15 objetivos propostos pela ONU',
-      description: 'As medidas tomadas pelo Governo de São Paulo para enfrentar a pandemia do novo coronavírus impactaram positivamente 15 dos 17 Objetivos de Desenvolvimento Sustentável (ODS) propostos pela Organização das Nações Unidas (ONU) na Agenda 2030.',
-      link: 'https://www.saopaulo.sp.gov.br/spnoticias/ultimas-noticias/acoes-do-estado-contra-o-coronavirus-impactam-15-objetivos-propostos-pela-onu/'
+      "imageUrl": "https://smastr16.blob.core.windows.net/portaleducacaoambiental/sites/201/2023/09/ods-quadrado2-1024x1004.jpg",
+      "title": "Educação Ambiental ganha força com os ODS em SP",
+      "description": "Novas iniciativas de educação ambiental em São Paulo estão sendo alinhadas aos Objetivos de Desenvolvimento Sustentável.",
+      "link": "https://semil.sp.gov.br/educacaoambiental/2024/08/educacao-ambiental-ods-sp/"
     },
     {
-      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMcHxkEPfBwSBoKNqQPYOcr_X48TsIlGS4mw&s',
-      title: 'Viva o Verde SP: população ajuda a planejar futuro de 8 parques em São Paulo',
-      description: 'Iniciativa da Prefeitura de São Paulo com ONU-Habitat promoveu 12 oficinas com 253 participantes para elaborar planos de gestão, documentos que vão guiar a administração, usos e normas de oito parques da cidade.',
-      link: 'https://www.prefeitura.sp.gov.br/cidade/secretarias/meio_ambiente/noticias/?p=367085'
+      "imageUrl": "https://viradaodssp.sp.gov.br/wp-content/uploads/2024/03/Logo-Virada-ODS_Cor-1-1024x631.png",
+      "title": "Evento em SP debate os desafios dos ODS",
+      "description": "Especialistas se reuniram em São Paulo para discutir os principais desafios e estratégias para alcançar os ODS.",
+      "link": "https://viradaodssp.sp.gov.br/2024/08/debate-ods-sp/"
     },
+    {
+      "imageUrl": "https://natosafe.com.br/wp-content/uploads/2023/05/objetivos-de-desenvolvimento-susentavel.png",
+      "title": "São Paulo lança portal de transparência para os ODS",
+      "description": "A Prefeitura de São Paulo lançou um portal de transparência dedicado ao acompanhamento dos Objetivos de Desenvolvimento Sustentável.",
+      "link": "https://www.saopaulo.sp.gov.br/noticias/2024/08/portal-transparencia-ods/"
+    },
+    {
+      "imageUrl": "https://cdn.awsli.com.br/2500x2500/2298/2298079/produto/153815267/adesivo-brasao-prefeitura-de-sao-paulo-md-998-1-hlbpsh.jpg",
+      "title": "SP promove workshops sobre os ODS nas escolas",
+      "description": "Workshops sobre os ODS estão sendo promovidos em escolas de São Paulo para conscientizar estudantes sobre a importância da sustentabilidade.",
+      "link": "https://www.prefeitura.sp.gov.br/noticias/2024/08/workshops-ods-escolas/"
+    },
+    {
+      "imageUrl": "https://natosafe.com.br/wp-content/uploads/2023/05/objetivos-de-desenvolvimento-susentavel.png",
+      "title": "Plano de ação de SP para os ODS é destaque na ONU",
+      "description": "O plano de ação de São Paulo para os ODS foi apresentado na ONU como exemplo de boas práticas para outras cidades.",
+      "link": "https://www.onu.org.br/2024/08/plano-acao-ods-sp/"
+    },
+    {
+      "imageUrl": "https://smastr16.blob.core.windows.net/portaleducacaoambiental/sites/201/2023/09/ods-quadrado2-1024x1004.jpg",
+      "title": "São Paulo avança na inclusão social com os ODS",
+      "description": "Novas políticas públicas em São Paulo focam na inclusão social, em linha com os Objetivos de Desenvolvimento Sustentável.",
+      "link": "https://www.saopaulo.sp.gov.br/noticias/2024/08/inclusao-social-ods/"
+    },
+    {
+      "imageUrl": "https://viradaodssp.sp.gov.br/wp-content/uploads/2024/03/Logo-Virada-ODS_Cor-1-1024x631.png",
+      "title": "SP lança campanha de conscientização sobre os ODS",
+      "description": "Uma nova campanha foi lançada em São Paulo para conscientizar a população sobre os Objetivos de Desenvolvimento Sustentável.",
+      "link": "https://viradaodssp.sp.gov.br/2024/08/campanha-conscientizacao-ods/"
+    },
+    {
+      "imageUrl": "https://natosafe.com.br/wp-content/uploads/2023/05/objetivos-de-desenvolvimento-susentavel.png",
+      "title": "Prefeitura de SP e empresas privadas se unem pelos ODS",
+      "description": "A Prefeitura de São Paulo firmou parcerias com empresas privadas para acelerar a implementação dos ODS na cidade.",
+      "link": "https://www.saopaulo.sp.gov.br/noticias/2024/08/parcerias-privadas-ods/"
+    },
+    {
+      "imageUrl": "https://cdn.awsli.com.br/2500x2500/2298/2298079/produto/153815267/adesivo-brasao-prefeitura-de-sao-paulo-md-998-1-hlbpsh.jpg",
+      "title": "SP é exemplo em políticas ambientais para os ODS",
+      "description": "São Paulo foi destaque em um relatório internacional sobre as políticas ambientais voltadas aos Objetivos de Desenvolvimento Sustentável.",
+      "link": "https://www.saopaulo.sp.gov.br/noticias/2024/08/politicas-ambientais-ods/"
+    },
+    {
+      "imageUrl": "https://natosafe.com.br/wp-content/uploads/2023/05/objetivos-de-desenvolvimento-susentavel.png",
+      "title": "São Paulo inicia novas ações para atingir os ODS",
+      "description": "A cidade de São Paulo iniciou uma série de novas ações voltadas para o cumprimento dos ODS até 2030.",
+      "link": "https://www.saopaulo.sp.gov.br/noticias/2024/08/novas-acoes-ods/"
+    },
+    {
+      "imageUrl": "https://natosafe.com.br/wp-content/uploads/2023/05/objetivos-de-desenvolvimento-susentavel.png",
+      "title": "SP investe em energias renováveis para atingir metas dos ODS",
+      "description": "São Paulo anuncia novos investimentos em energias renováveis, alinhados com os Objetivos de Desenvolvimento Sustentável.",
+      "link": "https://www.saopaulo.sp.gov.br/noticias/2024/08/investimentos-energias-renovaveis-ods/"
+    },
+    {
+      "imageUrl": "https://cdn.awsli.com.br/2500x2500/2298/2298079/produto/153815267/adesivo-brasao-prefeitura-de-sao-paulo-md-998-1-hlbpsh.jpg",
+      "title": "Projeto ODS nas Comunidades leva desenvolvimento sustentável à periferia de SP",
+      "description": "Iniciativa da Prefeitura de São Paulo leva os Objetivos de Desenvolvimento Sustentável às comunidades mais vulneráveis da cidade.",
+      "link": "https://www.prefeitura.sp.gov.br/noticias/2024/08/projeto-ods-comunidades/"
+    },
+    {
+      "imageUrl": "https://natosafe.com.br/wp-content/uploads/2023/05/objetivos-de-desenvolvimento-susentavel.png",
+      "title": "SP lança plano de mobilidade urbana sustentável",
+      "description": "A cidade de São Paulo apresentou seu novo plano de mobilidade urbana, com foco na sustentabilidade e nos ODS.",
+      "link": "https://www.saopaulo.sp.gov.br/noticias/2024/08/plano-mobilidade-urbana-ods/"
+    },
+    {
+      "imageUrl": "https://smastr16.blob.core.windows.net/portaleducacaoambiental/sites/201/2023/09/ods-quadrado2-1024x1004.jpg",
+      "title": "SP amplia programas de saúde pública alinhados aos ODS",
+      "description": "São Paulo anuncia a expansão de programas de saúde pública, em conformidade com os Objetivos de Desenvolvimento Sustentável.",
+      "link": "https://www.saopaulo.sp.gov.br/noticias/2024/08/programas-saude-publica-ods/"
+    },
+    {
+      "imageUrl": "https://viradaodssp.sp.gov.br/wp-content/uploads/2024/03/Logo-Virada-ODS_Cor-1-1024x631.png",
+      "title": "Empresas paulistas aderem aos ODS em iniciativas locais",
+      "description": "Diversas empresas em São Paulo estão adotando os ODS em suas práticas e contribuindo para o desenvolvimento sustentável local.",
+      "link": "https://www.saopaulo.sp.gov.br/noticias/2024/08/empresas-paulistas-ods/"
+    },
+    {
+      "imageUrl": "https://natosafe.com.br/wp-content/uploads/2023/05/objetivos-de-desenvolvimento-susentavel.png",
+      "title": "Programa Verde SP recebe reconhecimento internacional por cumprir ODS",
+      "description": "O Programa Verde SP foi reconhecido internacionalmente por sua contribuição significativa para os Objetivos de Desenvolvimento Sustentável.",
+      "link": "https://www.saopaulo.sp.gov.br/noticias/2024/08/programa-verde-sp-ods/"
+    }
   ]
+  itemsPerPage = 4;
+  currentPage = 1;
+
+  get totalPages() {
+    return Math.ceil(this.highlights.length / this.itemsPerPage);
+  }
+
+  get paginatedHighlights() {
+    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+    return this.highlights.slice(startIndex, startIndex + this.itemsPerPage);
+  }
+
+  nextPage() {
+    if (this.currentPage < this.totalPages) {
+      this.currentPage++;
+    }
+  }
+
+  previousPage() {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+    }
+  }
+
 }
+
