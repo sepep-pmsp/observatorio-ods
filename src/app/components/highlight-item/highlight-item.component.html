@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="image">
+      <img class="image-card" [src]="highlight.imageUrl" alt="">
+    </div>
+    <div class="content">
+      <span class="title">
+        <h3>{{ highlight.title }}</h3>
+      </span>
+      <p class="desc">
+        {{ highlight.description }}
+      </p>
+      <a [href]="highlight.link" target="_blank" class="btn-highlights">
+        <button class="btn-highlights">
+            <span class="btn-span-highlights"> 
+                Leia mais
+            </span>
+        </button>
+      </a>
+    </div>
+  </div>  
