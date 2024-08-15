@@ -8,6 +8,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { NewsComponent } from './components/news/news.component';
 import { HighlightsComponent } from './pages/highlights/highlights.component';
 import { HighlightItemComponent } from './components/highlight-item/highlight-item.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HighlightItemComponent } from './components/highlight-item/highlight-it
     NewsComponent,
     HighlightsComponent,
     HighlightItemComponent,
+    FooterComponent,
     
   ],
   imports: [

@@ -1,0 +1,52 @@
+.footer{
+    height: 21rem;
+    color: var(--White);
+    background-color: var(--Black);
+    margin: 0;
+    padding: 0;
+}
+
+.images-footer{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-content: center;
+    flex-direction: row;
+    width: 195vh;
+    margin: 2rem;
+}
+
+.logo-ods-claro{
+    background-image: url("../../../assets/img/logo-ods-claro.png");
+    background-size: cover;
+    width: 21.5rem;
+    height: 17.5rem;
+}
+
+.logo-prefeitura-claro{
+    background-image: url("../../../assets/img/logo-prefeitura-claro.png");
+    background-size: cover;
+    width: 25.3rem;
+    height: 8.6rem;
+    position: absolute;
+    right: 10rem;
+    top: 69rem;
+}
+
+.list-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    top: 78rem;
+    right: 6rem;
+}
+
+.footer-contact{
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 2rem;
+    margin: 0.8rem;
+}

@@ -76,7 +76,7 @@
         justify-content: space-between;
         gap: 1rem;
         margin-right: 15rem; 
-        width: 68rem;
+        width: 100rem;
     }
     .card {
         flex: 1 1 calc(50% - 2rem); /* Ajuste a largura dos cards para que não invadam o menu */
@@ -104,7 +104,6 @@
     max-width: 100rem;
     border-radius: 1rem;
     padding: 0.5rem 0.5rem 0.5rem 2rem;
-    margin-left: 29rem;
 
 }
 
