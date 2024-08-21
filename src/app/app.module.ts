@@ -11,6 +11,7 @@ import { HighlightItemComponent } from './components/newsPage/highlight-item/hig
 import { FooterComponent } from './components/body/footer/footer.component';
 import { IndicadoresComponent } from './components/indicators/indicadores/indicadores.component';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
+import { SearchIndicatorsComponent } from './components/indicators/search-indicators/search-indicators.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
     HighlightItemComponent,
     FooterComponent,
     IndicadoresComponent,
+    SearchIndicatorsComponent,
     
   ],
   imports: [
