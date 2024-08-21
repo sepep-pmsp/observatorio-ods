@@ -18,14 +18,14 @@
 }
 
 .logo-ods-claro{
-    background-image: url("../../../assets/img/logo-ods-claro.png");
+    background-image: url("../../../../assets/img/logo.png");
     background-size: cover;
     width: 21.5rem;
     height: 17.5rem;
 }
 
 .logo-prefeitura-claro{
-    background-image: url("../../../assets/img/logo-prefeitura-claro.png");
+    background-image: url("../../../../assets/img/logo-prefeitura-claro.png");
     background-size: cover;
     width: 25.3rem;
     height: 8.6rem;
