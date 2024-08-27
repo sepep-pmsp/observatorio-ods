@@ -1,37 +1,31 @@
 <div class="so-widget-estrategia-outer">
-    <div class="so-widget-estrategia">
-      <div class="grid-estrategia">
-        
-        <div class="so-widget">
-          <div class="tooltip-container">
-            <span class="tooltip">Os Indicadores ao lado</span>
-            <span class="text">
-              <p class="text-paragrafo">selecione o</p>
-              <p class="text-indicador">indicador</p>
-            </span>
-          </div>
+  <div class="so-widget-estrategia">
+    <div class="grid-estrategia">
+      <div class="so-widget">
+        <div class="tooltip-container">
+          <span class="tooltip">Os Indicadores ao lado</span>
+          <span class="text">
+            <p class="text-paragrafo">selecione o</p>
+            <p class="text-indicador">indicador</p>
+          </span>
         </div>
-  
-        <div *ngFor="let estrategia of estrategias; let i = index" class="indicadores-gerais">
-          <button 
-            (click)="toggleModal(i)" 
-            class="modal-button" 
-            [ngStyle]="{'box-shadow': getBoxShadow(i)}"
-          >
-            <img [src]="estrategia.imgSrc" alt="Estratégia {{i}}" />
-          </button>
-          <div class="modal" *ngIf="selectedModal === i">
-            <div class="modal--wrapper">
-              <div class="modal--header">
-                <img [src]="estrategia.imgSrc" alt="Estratégia {{i}}">
-              </div>
-              <div class="modal--content">
-              </div>
-            </div>
-          </div>
-        </div>
-  
+      </div>
+      <div *ngFor="let estrategia of estrategias; let i = index" class="grid-estrategia">
+        <button class="modal-button" (click)="selectIndicator(estrategia.id)"
+        [ngStyle]="{'box-shadow': getBoxShadow(estrategia.id)}">
+          <img [src]="estrategia.imgSrc" alt="Estratégia {{estrategia.id}}">
+        </button>
       </div>
     </div>
-  </div>
-  <app-search-indicators></app-search-indicators>
+
+    <app-search-indicators></app-search-indicators>
+  
+    <div class="cards-container">
+      <app-card-indicators 
+        *ngIf="selectedIndicator !== null" 
+        [dados]="dadosIndicador[selectedIndicator]" 
+        [cor]="getCor(selectedIndicator)">
+      </app-card-indicators>
+    </div>
+  </div> 
+</div>
