@@ -7,9 +7,9 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class DadosService {
+  private jsonUrl = 'assets/json/data.json';
 
-  private jsonUrl = 'assets/json/data.json'; 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getData(): Observable<any> {
     return this.http.get<any>(this.jsonUrl).pipe(
