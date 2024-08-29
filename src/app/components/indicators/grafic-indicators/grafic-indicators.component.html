@@ -1,0 +1,23 @@
+<div class="grafic-indicators">
+
+  <h3>Selecione a Unidade Territorial:</h3>
+  <div *ngFor="let unidade of unidadesTerritoriais">
+    <label>
+      <input type="radio" name="unidade" [value]="unidade" [(ngModel)]="unidadeSelecionada" (change)="carregarDados()">
+      {{ unidade }}
+    </label>
+  </div>
+
+
+  <div *ngIf="unidadeSelecionada !== 'Município'">
+    <label for="opcoes-select">Selecione {{ unidadeSelecionada }}:</label>
+    <select id="opcoes-select" [(ngModel)]="selecaoOpcao" (change)="atualizarSelecao()">
+      <option value="">Selecione</option>
+      <option *ngFor="let opcao of opcoes" [value]="opcao">{{ opcao }}</option>
+    </select>
+  </div>
+
+  <div *ngIf="dadosSelecionados">
+    <h4>Dados Selecionados:</h4>
+    <pre>{{ dadosSelecionados | json }}</pre>
+  </div>
