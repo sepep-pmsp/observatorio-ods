@@ -9,6 +9,9 @@ export class CardIndicatorsComponent {
   @Input() dados: any[] = [];
   @Input() cor: string | null = null;
 
+  @Input() unidadeSelecionada: string = ''; 
+  @Input() selecaoOpcao: string = '';
+
  getColor(nm_indicador: string): string {
     return this.cor ? this.cor : '#E5233D';
   }

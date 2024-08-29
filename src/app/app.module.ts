@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CardModule } from 'primeng/card';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { IndicadoresComponent } from './components/indicators/indicadores/indica
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { SearchIndicatorsComponent } from './components/indicators/search-indicators/search-indicators.component';
 import { CardIndicatorsComponent } from './components/indicators/card-indicators/card-indicators.component';
+import { GraficIndicatorsComponent } from './components/indicators/grafic-indicators/grafic-indicators.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { CardIndicatorsComponent } from './components/indicators/card-indicators
     IndicadoresComponent,
     SearchIndicatorsComponent,
     CardIndicatorsComponent,
+    GraficIndicatorsComponent,
     
   ],
   imports: [
@@ -35,6 +38,7 @@ import { CardIndicatorsComponent } from './components/indicators/card-indicators
     HttpClientModule,
     HttpClientJsonpModule,
     CardModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
