@@ -18,12 +18,12 @@ export class GraficIndicatorsComponent implements OnInit, OnDestroy {
   opcoes: string[] = [];
   dadosSelecionados: any = {};
 
-  @ViewChild('chartCanvas', { static: true }) chartCanvas: ElementRef<HTMLCanvasElement> | undefined; // Adicionando { static: true }
+  @ViewChild('chartCanvas', { static: true }) chartCanvas: ElementRef<HTMLCanvasElement> | undefined;
   chart: Chart | undefined;
 
   ngOnInit() {
     this.filtrarDados(); 
-    this.createBaseChart(); // Cria um gráfico base ao iniciar
+    this.createBaseChart(); 
   }
 
   ngOnDestroy() {
@@ -51,10 +51,20 @@ export class GraficIndicatorsComponent implements OnInit, OnDestroy {
     return disponiveis;
   }
 
+  onCheckboxChange(unidade: string, event: Event) {
+    const inputElement = event.target as HTMLInputElement; 
+    if (inputElement && inputElement.checked) {
+      this.unidadeSelecionada = unidade; 
+    } else {
+      this.unidadeSelecionada = ''; 
+    }
+
+    this.carregarDados(); 
+  }
+
   carregarDados() {
     if (this.unidadeSelecionada === 'Município') {
       this.dadosSelecionados = this.dadosFiltrados?.resultados?.['Município']?.['São Paulo'] || {};
-      this.opcoes = [];
     } else if (this.unidadeSelecionada === 'Subprefeitura' || this.unidadeSelecionada === 'Distrito') {
       const dataObject = this.dadosFiltrados?.resultados?.[this.unidadeSelecionada] || {};
       this.opcoes = Object.keys(dataObject); 
@@ -68,8 +78,9 @@ export class GraficIndicatorsComponent implements OnInit, OnDestroy {
   }
 
   atualizarSelecao() {
-    if (this.unidadeSelecionada !== 'Município' && this.selecaoOpcao) {
-      this.dadosSelecionados = this.dadosFiltrados?.resultados?.[this.unidadeSelecionada]?.[this.selecaoOpcao] || {};
+    if (this.unidadeSelecionada === 'Subprefeitura' || this.unidadeSelecionada === 'Distrito') {
+      const key = this.selecaoOpcao;
+      this.dadosSelecionados = this.dadosFiltrados?.resultados?.[this.unidadeSelecionada]?.[key] || {};
     }
 
     this.createChart();
@@ -79,7 +90,6 @@ export class GraficIndicatorsComponent implements OnInit, OnDestroy {
     return this.corIndicador ?? '#E5233D';
   }
 
-  // Cria o gráfico base vazio
   createBaseChart(): void {
     if (!this.chartCanvas) {
       return;
@@ -92,7 +102,7 @@ export class GraficIndicatorsComponent implements OnInit, OnDestroy {
         data: {
           labels: ['Ano'], 
           datasets: [{
-            label: 'Dados do Indicador',
+            label: 'Dados do Indicador (Base)',
             data: [0], 
             fill: false,
             borderColor: this.getColor(),
@@ -139,7 +149,7 @@ export class GraficIndicatorsComponent implements OnInit, OnDestroy {
     const dataValues = labels.map(label => dadosIndicador[label]);
     if (labels.length === 0 || dataValues.length === 0) {
       this.destroyChart(); 
-      this.createBaseChart(); // Cria o gráfico base novamente se não houver dados
+      this.createBaseChart(); 
       return;
     }
 

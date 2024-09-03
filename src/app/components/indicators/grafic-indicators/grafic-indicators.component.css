@@ -29,3 +29,40 @@
     width: 20rem;
     text-align: center;
 }
+
+.custom-checkbox {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid var(--custom-color, #E5233D); 
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: transparent; 
+  }
+  
+  .custom-checkbox:checked::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--custom-color, #E5233D);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
+  
+  .radio-unidadeSelecionada {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  

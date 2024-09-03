@@ -23,6 +23,12 @@
 
 .card--aside{
     margin: 1rem;
+    display: flex;
+    align-content: space-between;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 3rem;
 }
 
 .txt-card-row{

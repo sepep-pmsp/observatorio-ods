@@ -1,7 +1,7 @@
 <div class="card-indicators">
   <div class="card-indicators-row" *ngFor="let cardData of dados; let i = index">
     <p-card [id]="cardData.nm_indicador" 
-        [style]="{border: '2px solid ' + getColor(cardData.nm_indicador),
+        [style]="{border: '3px solid ' + getColor(cardData.nm_indicador),
         borderRadius: '4rem',
         backgroundColor: getColor(cardData.nm_indicador) +'0a'
       }">
@@ -11,7 +11,7 @@
             <img [src]="getImagePath(cardData.nm_indicador)" alt="{{ cardData.name_indicador }}">
           </div>
           <div class="txt-card-row">
-            <h2>{{ cardData.nm_indicador }}</h2>
+            <h2> Indicador {{ cardData.nm_indicador }}</h2>
             <h3>{{ cardData.name_indicador }}</h3>
           </div>
         </div>
@@ -21,8 +21,7 @@
           <div class="card-graphic-row">
             <app-grafic-indicators 
               [dados]="dados" 
-              [indicadorId]="cardData.nm_indicador"
-              [unidadeSelecionada]="unidadeSelecionada" 
+              [indicadorId]="cardData.nm_indicador" 
               [selecaoOpcao]="selecaoOpcao"
               [corIndicador]="getColor(cardData.nm_indicador)">
             </app-grafic-indicators>

@@ -4,14 +4,15 @@
   </div>
   <div class="radio-unidades">
     <div *ngFor="let unidade of unidadesTerritoriais; let i = index">
-      <label>
+      <label [for]="'checkbox-' + indicadorId + '-' + i" class="radio-unidadeSelecionada">
         <input
-          type="radio"
-          name="'unidade-' + indicadorId" 
+          type="checkbox"
+          [id]="'checkbox-' + indicadorId + '-' + i"
           [value]="unidade"
-          [(ngModel)]="unidadeSelecionada"
-          (change)="carregarDados()"
-          class="custom-radio"> 
+          [checked]="unidadeSelecionada === unidade" 
+          (change)="onCheckboxChange(unidade, $event)"
+          class="custom-checkbox"
+          [ngStyle]="{'--custom-color': getColor()}"> 
         {{ unidade }}
       </label>
     </div>
@@ -19,7 +20,7 @@
 </div>
 
 
-<div *ngIf="unidadeSelecionada !== 'Município' && opcoes.length > 0">
+<div *ngIf="opcoes.length > 0">
   <label class="Lb-select" for="opcoes-select-{{indicadorId}}">Selecione: </label>
   <select
     id="opcoes-select-{{indicadorId}}"
