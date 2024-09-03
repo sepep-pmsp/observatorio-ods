@@ -64,6 +64,9 @@
     align-items: center;
 }
 
+.desk{
+    text-transform: uppercase;
+}
 
 .find-more{
     padding: 1rem;
