@@ -72,10 +72,40 @@ def save_to_json(data):
         json.dump(data, json_file, indent=4, ensure_ascii=False)
     print(f"Dados salvos em {filepath}")
 
-if __name__ == "__main__":
+
+def rodar():
+
     print(f"Script iniciado em {datetime.now()}")
     indicadores = get_indicadores()
     ficha_data = get_ficha_indicadores(indicadores)
     organized_data = organize_indicators(ficha_data)
     save_to_json(organized_data)
+    last_rodou = time.now()
     print(f"Script finalizado em {datetime.now()}")
+
+
+if __name__ == "__main__":
+
+    import time
+
+    #vai rodar de hora em hora
+    #DELAY_SECS = 60*60*1
+    DELAY_SECS=5
+
+    last_rodou = 0
+    rodou_uma_vez = False
+    while True:
+
+        #vai entrar aqui soh na primeira vez que rodar noi deploy
+        if not rodou_uma_vez:
+            rodar()
+            last_rodou=time.now()
+            rodou_uma_vez=True
+
+        agora = time.now()
+        tempo_ultima_rodada = agora - last_rodou
+        if tempo_ultima_rodada > DELAY_SECS:
+            rodar()
+            last_rodou=time.now()
+
+            

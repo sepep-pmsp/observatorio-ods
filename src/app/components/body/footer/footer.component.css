@@ -4,13 +4,15 @@
     background-color: var(--Black);
     margin: 0;
     padding: 0;
+    z-index: 1;
+    position: sticky;
 }
 
 .images-footer{
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-end;
+    justify-content: space-around;
+    align-items: center;
     align-content: center;
     flex-direction: row;
     width: 195vh;
