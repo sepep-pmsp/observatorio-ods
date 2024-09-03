@@ -1,0 +1,49 @@
+.card--header{
+    border-radius: 3.8rem;
+    padding: 1rem;
+}
+
+.header-indicador-card{
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.card--main{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.card--aside{
+    margin: 1rem;
+}
+
+.txt-card-row{
+    width: 75rem;
+    color: var(--White);
+}
+
+.card-indicators-row{
+    margin: 1.9rem 0 1.5rem 0;
+    width: 85rem;
+}
+
+.card-graphic{
+    margin: 1rem;
+}
+
+.card-indicators{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}

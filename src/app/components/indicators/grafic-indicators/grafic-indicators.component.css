@@ -1,0 +1,31 @@
+.grafico-canva{
+    width: 45rem;
+    border: 1px solid;
+    border-radius: 4rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    height: 24rem;
+    background-color: var(--White);
+}
+
+.grafico-resultados, 
+.Selecionados-title4{
+    margin: 0.5rem;
+}
+
+.radio-unidades{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    margin: 0.6rem;
+}
+
+.opcoes-select{
+    margin: 1rem;
+    border-radius: 4rem;
+    padding: 0.5rem;
+    width: 20rem;
+    text-align: center;
+}

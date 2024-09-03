@@ -1,80 +1,202 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { DadosService } from '../../../service/dados.service';
+import { Component, Input, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
+import { Chart, ChartConfiguration } from 'chart.js';
 
 @Component({
   selector: 'app-grafic-indicators',
   templateUrl: './grafic-indicators.component.html',
   styleUrls: ['./grafic-indicators.component.css']
 })
-export class GraficIndicatorsComponent implements OnInit {
-  @Input() dados: any = {};
-  @Input() unidadeSelecionada: string = '';
+export class GraficIndicatorsComponent implements OnInit, OnDestroy {
+  @Input() dados: any; 
+  @Input() indicadorId: string = ''; 
+  @Input() unidadeSelecionada: string = ''; 
   @Input() selecaoOpcao: string = '';
-  @Input() indicadorId: string = '';
-  @Input() cardId: string = '';
+  @Input() corIndicador: string | null = null;
 
-  unidadesTerritoriais = ['Município', 'Subprefeitura', 'Distrito'];
+  dadosFiltrados: any = {}; 
+  unidadesTerritoriais: string[] = []; 
   opcoes: string[] = [];
-  indicadores: any[] = [];
   dadosSelecionados: any = {};
 
-  private dadosJson: any = {};
+  @ViewChild('chartCanvas', { static: true }) chartCanvas: ElementRef<HTMLCanvasElement> | undefined; // Adicionando { static: true }
+  chart: Chart | undefined;
 
-  constructor(private dadosService: DadosService) { }
+  ngOnInit() {
+    this.filtrarDados(); 
+    this.createBaseChart(); // Cria um gráfico base ao iniciar
+  }
 
-  ngOnInit(): void {
-    this.dadosService.getData().subscribe({
-      next: (response) => {
-        this.dadosJson = response['01'][0].resultados;
-        this.carregarDados();
-      },
-      error: (error) => {
-        console.error('Erro ao carregar dados:', error);
-      }
-    });
+  ngOnDestroy() {
+    this.destroyChart(); 
+  }
+
+  filtrarDados() {
+    if (this.dados && this.indicadorId) {
+      this.dadosFiltrados = this.dados.find((item: any) => item.nm_indicador === this.indicadorId);
+      this.unidadesTerritoriais = this.obterUnidadesDisponiveis();
+    }
+  }
+
+  obterUnidadesDisponiveis(): string[] {
+    const disponiveis: string[] = [];
+    if (this.dadosFiltrados?.resultados?.['Município']) {
+      disponiveis.push('Município');
+    }
+    if (this.dadosFiltrados?.resultados?.['Subprefeitura']) {
+      disponiveis.push('Subprefeitura');
+    }
+    if (this.dadosFiltrados?.resultados?.['Distrito']) {
+      disponiveis.push('Distrito');
+    }
+    return disponiveis;
   }
 
   carregarDados() {
     if (this.unidadeSelecionada === 'Município') {
-      this.dadosSelecionados = this.dadosJson['Município'] || {};
-      this.carregarIndicadores();
+      this.dadosSelecionados = this.dadosFiltrados?.resultados?.['Município']?.['São Paulo'] || {};
+      this.opcoes = [];
+    } else if (this.unidadeSelecionada === 'Subprefeitura' || this.unidadeSelecionada === 'Distrito') {
+      const dataObject = this.dadosFiltrados?.resultados?.[this.unidadeSelecionada] || {};
+      this.opcoes = Object.keys(dataObject); 
+      this.atualizarSelecao();
     } else {
-      if (this.selecaoOpcao) {
-        this.dadosSelecionados = this.dadosJson[this.unidadeSelecionada]?.[this.selecaoOpcao] || {};
-      } else {
-        this.dadosSelecionados = {};
-      }
-      this.opcoes = Object.keys(this.dadosJson[this.unidadeSelecionada] || {});
-      this.selecaoOpcao = '';
+      this.dadosSelecionados = {};
+      this.opcoes = [];
     }
-    this.indicadores = Object.keys(this.dadosSelecionados).map(indicador => ({
-      nome: indicador,
-      dados: this.dadosSelecionados[indicador]
-    }));
-  }
 
-
-  carregarIndicadores() {
-    this.indicadores = [];
-
-    for (let indicador in this.dadosSelecionados) {
-      if (this.dadosSelecionados.hasOwnProperty(indicador)) {
-        this.indicadores.push({
-          nome: indicador,
-          dados: this.dadosSelecionados[indicador]
-        });
-      }
-    }
+    this.createChart(); 
   }
 
   atualizarSelecao() {
-    if (this.selecaoOpcao) {
-      this.dadosSelecionados = this.dadosJson[this.unidadeSelecionada]?.[this.selecaoOpcao] || {};
-      this.carregarIndicadores();
+    if (this.unidadeSelecionada !== 'Município' && this.selecaoOpcao) {
+      this.dadosSelecionados = this.dadosFiltrados?.resultados?.[this.unidadeSelecionada]?.[this.selecaoOpcao] || {};
+    }
+
+    this.createChart();
+  }
+
+  getColor(): string {
+    return this.corIndicador ?? '#E5233D';
+  }
+
+  // Cria o gráfico base vazio
+  createBaseChart(): void {
+    if (!this.chartCanvas) {
+      return;
+    }
+
+    const ctx = this.chartCanvas.nativeElement.getContext('2d');
+    if (ctx) {
+      const config: ChartConfiguration = {
+        type: 'line',
+        data: {
+          labels: ['Ano'], 
+          datasets: [{
+            label: 'Dados do Indicador',
+            data: [0], 
+            fill: false,
+            borderColor: this.getColor(),
+            backgroundColor: this.getColor() + '0D',
+            tension: 0.1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: true
+            }
+          },
+          scales: {
+            x: {
+              type: 'category',
+              title: {
+                display: true,
+                text: 'Ano'
+              }
+            },
+            y: {
+              title: {
+                display: true,
+                text: 'Valor'
+              }
+            }
+          }
+        }
+      };
+
+      this.chart = new Chart(ctx, config);
     }
   }
-  getDadosByCardId(cardId: string): any {
-    const indicadorId = cardId.split('-')[1];
-    return this.dadosJson[indicadorId] || {};
+
+  createChart(): void {
+    if (!this.chartCanvas) {
+      return;
+    }
+
+    const dadosIndicador = this.dadosSelecionados || {};
+    const labels = Object.keys(dadosIndicador).sort();
+    const dataValues = labels.map(label => dadosIndicador[label]);
+    if (labels.length === 0 || dataValues.length === 0) {
+      this.destroyChart(); 
+      this.createBaseChart(); // Cria o gráfico base novamente se não houver dados
+      return;
+    }
+
+    const config: ChartConfiguration = {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Dados do Indicador',
+          data: dataValues,
+          fill: false,
+          borderColor: this.getColor(),
+          backgroundColor: this.getColor() + '0D',
+          tension: 0.1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true
+          }
+        },
+        scales: {
+          x: {
+            type: 'category',
+            title: {
+              display: true,
+              text: 'Ano'
+            }
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'Valor'
+            }
+          }
+        }
+      }
+    };
+
+    this.destroyChart();
+
+    const ctx = this.chartCanvas.nativeElement.getContext('2d');
+    if (ctx) {
+      this.chart = new Chart(ctx, config);
+    }
+  }
+
+  destroyChart(): void {
+    if (this.chart) {
+      this.chart.destroy();
+      this.chart = undefined;
+    }
+  }
+
+  hasData(): boolean {
+    return Object.keys(this.dadosSelecionados).length > 0;
   }
 }

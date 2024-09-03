@@ -1,41 +1,50 @@
 <div class="card-indicators">
   <div class="card-indicators-row" *ngFor="let cardData of dados; let i = index">
-    <p-card [id]="'card-' + cardData.nm_indicador + '-' + i" 
-            [style]="{border: '2px solid ' + getColor(cardData.nm_indicador)}">
+    <p-card [id]="cardData.nm_indicador" 
+        [style]="{border: '2px solid ' + getColor(cardData.nm_indicador),
+        borderRadius: '4rem',
+        backgroundColor: getColor(cardData.nm_indicador) +'0a'
+      }">
       <div class="card--header" [ngStyle]="{'background-color': getColor(cardData.nm_indicador)}">
         <div class="header-indicador-card">
-          <img [src]="getImagePath(cardData.nm_indicador)" alt="{{ cardData.name_indicador }}">
-          <h2>{{ cardData.nm_indicador }}</h2>
-          <h3>{{ cardData.name_indicador }}</h3>
+          <div class="img-card-row">
+            <img [src]="getImagePath(cardData.nm_indicador)" alt="{{ cardData.name_indicador }}">
+          </div>
+          <div class="txt-card-row">
+            <h2>{{ cardData.nm_indicador }}</h2>
+            <h3>{{ cardData.name_indicador }}</h3>
+          </div>
         </div>
       </div>
-      <div class="card-graphic">
-        <div class="card-graphic-row">
-          <app-grafic-indicators 
-            [dados]="cardData.dados"
-            [unidadeSelecionada]="unidadeSelecionada"
-            [selecaoOpcao]="selecaoOpcao"
-            [indicadorId]="cardData.nm_indicador"
-            [cardId]="'card-' + cardData.nm_indicador + '-' + i">
-          </app-grafic-indicators>
+      <div class="card--main">
+        <div class="card-graphic">
+          <div class="card-graphic-row">
+            <app-grafic-indicators 
+              [dados]="dados" 
+              [indicadorId]="cardData.nm_indicador"
+              [unidadeSelecionada]="unidadeSelecionada" 
+              [selecaoOpcao]="selecaoOpcao"
+              [corIndicador]="getColor(cardData.nm_indicador)">
+            </app-grafic-indicators>
+          </div>
         </div>
-      </div>
-      <div class="card-body">
-        <div class="descricao-card">
-          <h5 class="title-card">Descrição:</h5>
-          <p class="paragraph-card">{{ cardData.nm_completo_indicador }}</p>
-        </div>
-        <div>
-          <h5 class="title-card">Conceitos e definições</h5>
-          <p class="paragraph-card">{{ cardData.dc_conceito_indicador }}</p>
-        </div>
-        <div>
-          <h5 class="title-card">Fórmula de cálculo (em texto)</h5>
-          <p class="paragraph-card">{{ cardData.dc_formula_indicador }}</p>
-        </div>
-        <div>
-          <h5 class="title-card">Fonte</h5>
-          <p class="paragraph-card">{{ cardData.tx_fonte_indicador }}</p>
+        <div class="card--aside">
+          <div class="descricao-card">
+            <h5 class="title-card">Descrição:</h5>
+            <p class="paragraph-card">{{ cardData.nm_completo_indicador }}</p>
+          </div>
+          <div>
+            <h5 class="title-card">Conceitos e definições</h5>
+            <p class="paragraph-card">{{ cardData.dc_conceito_indicador }}</p>
+          </div>
+          <div>
+            <h5 class="title-card">Fórmula de cálculo (em texto)</h5>
+            <p class="paragraph-card">{{ cardData.dc_formula_indicador }}</p>
+          </div>
+          <div>
+            <h5 class="title-card">Fonte</h5>
+            <p class="paragraph-card">{{ cardData.tx_fonte_indicador }}</p>
+          </div>
         </div>
       </div>
     </p-card>

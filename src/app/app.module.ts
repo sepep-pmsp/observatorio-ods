@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CardModule } from 'primeng/card';
 import { FormsModule } from '@angular/forms';
+import { ChartModule } from 'primeng/chart';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,7 +39,8 @@ import { GraficIndicatorsComponent } from './components/indicators/grafic-indica
     HttpClientModule,
     HttpClientJsonpModule,
     CardModule,
-    FormsModule
+    FormsModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
