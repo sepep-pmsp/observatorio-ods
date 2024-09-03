@@ -7,5 +7,6 @@ import { NavigationService } from './avigationService';
   styleUrl: './navigation.component.css'
 })
 export class NavigationComponent {
+sidebarVisible: any;
   constructor(public navigationService: NavigationService) { }
 }

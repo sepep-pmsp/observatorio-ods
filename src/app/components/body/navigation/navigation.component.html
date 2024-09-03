@@ -1,22 +1,36 @@
-<div class="navigation">
-    <div class="rowl">
-        <div class="contente">
-            <div class="list">
-                <ul class="nav justify-content-end">
-                    <li *ngIf="navigationService.isNotHome()" class="list-contente">
-                        <h6 class="animation-hover"><a [routerLink]="''">Voltar ao início</a></h6>
-                        <div id="horizontal-line"></div>
-                    </li>
-                    
-                    <li class="list-contente"><h6 class="animation-hover">Agenda 2030</h6></li>
-                    <div id="horizontal-line"></div>
-                    <li class="list-contente"><h6 class="animation-hover"><a [routerLink]="'/destaque'">Destaques</a></h6></li>
-                    <div id="horizontal-line"></div>
-                    <li class="list-contente"><h6 class="animation-hover">Sobre a ODS</h6></li>
-                    <div id="horizontal-line"></div>
-                    <li class="list-contente"><h6 class="animation-hover"><i class="fab fa-sistrix" style="color: #000000; font-weight: bold;"></i> Pesquisar</h6></li>
-                </ul>
-            </div>
+<div class="navegacao">
+    <div class="menu">
+        <div class="list">
+            <ul class="nav--list">
+                <li *ngIf="navigationService.isNotHome()" class="list-contente">
+                    <h6 class="animation-hover">
+                        <a [routerLink]="''">
+                        Voltar ao início</a>
+                    </h6>
+                </li>
+                
+                <li class="list-contente">
+                    <h6 class="animation-hover">
+                        <a href="">Agenda 2030</a>
+                    </h6>
+                </li>
+                <li class="list-contente">
+                    <h6 class="animation-hover">
+                        <a [routerLink]="'/destaque'">Destaques</a>
+                    </h6>
+                </li>
+                <li class="list-contente">
+                    <h6 class="animation-hover">
+                        <a href="">Sobre a ODS</a>
+                    </h6>
+                </li>
+                <li class="list-contente">
+                    <h6 class="animation-hover">
+                        <i class="fab fa-sistrix" style="color: #000000; font-weight: bold;"></i> 
+                        Pesquisar
+                    </h6>
+                </li>
+            </ul>
         </div>
     </div>
-  </div>
+</div>
