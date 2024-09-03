@@ -1,0 +1,72 @@
+@import "primeicons/primeicons.css";
+
+.so-widget-estrategia-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.so-widget-estrategia {
+    width: 100%;
+}
+
+.grid-estrategia {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.search {
+    width: 64rem
+}
+
+.search-container {
+    position: relative;
+    width: 110%;
+    max-width: 110%;
+}
+
+.input {
+    width: 100%;
+    padding: 1rem 3rem 1rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    background: #e8e8e8;
+    box-shadow: 20px 20px 60px #c5c5c5, -20px -20px 60px #ffffff;
+    transition: 0.3s;
+    font-size: 2rem;
+}
+
+.input:focus {
+    outline-color: #e8e8e8;
+    background: #e8e8e8;
+    box-shadow: inset 20px 20px 60px #c5c5c5, inset -20px -20px 60px #ffffff;
+    transition: 0.3s;
+}
+
+#angular-icon {
+    position: absolute;
+    right: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+}
+
+::placeholder {
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    .input {
+        font-size: 0.9rem;
+        padding: 0.8rem 2.8rem 0.8rem 0.8rem;
+    }
+
+    #angular-icon {
+        width: 20px;
+        height: 20px;
+    }
+}

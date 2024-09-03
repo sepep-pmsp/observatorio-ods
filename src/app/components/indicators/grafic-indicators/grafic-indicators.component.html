@@ -1,0 +1,39 @@
+<div class="grafic-indicators-row">
+  <div class="title-grafic">
+    <h3>Unidade Territorial:</h3>
+  </div>
+  <div class="radio-unidades">
+    <div *ngFor="let unidade of unidadesTerritoriais; let i = index">
+      <label [for]="'checkbox-' + indicadorId + '-' + i" class="radio-unidadeSelecionada">
+        <input
+          type="checkbox"
+          [id]="'checkbox-' + indicadorId + '-' + i"
+          [value]="unidade"
+          [checked]="unidadeSelecionada === unidade" 
+          (change)="onCheckboxChange(unidade, $event)"
+          class="custom-checkbox"
+          [ngStyle]="{'--custom-color': getColor()}"> 
+        {{ unidade }}
+      </label>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="opcoes.length > 0">
+  <label class="Lb-select" for="opcoes-select-{{indicadorId}}">Selecione: </label>
+  <select
+    id="opcoes-select-{{indicadorId}}"
+    [(ngModel)]="selecaoOpcao"
+    (change)="atualizarSelecao()"
+    class="opcoes-select">
+    <option *ngFor="let opcao of opcoes" [value]="opcao">{{ opcao }}</option>
+  </select>
+</div>
+
+<div>
+  <h4 class="dadosSelecionados-title4">Dados do Indicador</h4>
+  <div class="grafico-canva">
+    <canvas #chartCanvas></canvas>
+  </div>
+</div>

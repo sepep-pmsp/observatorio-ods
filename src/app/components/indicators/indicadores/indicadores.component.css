@@ -1,0 +1,104 @@
+.tooltip-container {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 17px;
+    padding: 0.7em 1.8em;
+    border-radius: 50px;
+    width: 169px;
+    height: 169px;
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.tooltip {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.3em 0.6em;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    border-radius: 50px;
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+    width: 12rem;
+    text-align: center;
+}
+
+.tooltip::before {
+    position: absolute;
+    content: "";
+    height: 0.6em;
+    width: 0.6em;
+    bottom: -0.2em;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.tooltip-container:hover .tooltip {
+    top: -40%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.text {
+    margin: 1rem;
+}
+
+.text-paragrafo {
+    text-align: center;
+}
+
+.text-indicador {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+
+/* indicator style  */
+
+.so-widget{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.so-widget-estrategia-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.so-widget-estrategia {
+    width: 100%;
+}
+
+.grid-estrategia {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    padding: 20px;
+    justify-content: center;
+}
+
+.modal-button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    border-radius: 2rem;
+}
+
+.cards-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
