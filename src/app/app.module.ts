@@ -21,6 +21,7 @@ import { CardIndicatorsComponent } from './components/indicators/card-indicators
 import { GraficIndicatorsComponent } from './components/indicators/grafic-indicators/grafic-indicators.component';
 import { AgendaComponent } from './pages/agenda/agenda.component';
 import { AboutComponent } from './pages/about/about.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AboutComponent } from './pages/about/about.component';
     GraficIndicatorsComponent,
     AgendaComponent,
     AboutComponent,
+    NotFoundComponent,
     
   ],
   imports: [
