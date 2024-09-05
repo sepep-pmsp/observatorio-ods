@@ -17,12 +17,9 @@
             </div>
             <div class="pdf-reander-01">
                 <div id="outerContainer">
-                        <pdf-viewer
-                        [src]="src1"
-                        [zoom]="0.75"
-                        style="width: 100%; height: 50rem; position: relative; overflow: hidden; max-height: 50rem;"
-                      ></pdf-viewer>
-                  </div>
+                    <pdf-viewer [src]="src1" [zoom]="0.75"
+                        style="width: 100%; height: 50rem; position: relative; overflow: hidden; max-height: 50rem;"></pdf-viewer>
+                </div>
             </div>
         </div>
 
@@ -39,15 +36,19 @@
 
     <div class="diagram">
         <div class="window">
-          <div class="title-window">
-            <h3>Implementando a agenda</h3>
-          </div>
-          <div class="txt-window">
-            <p>A implementação envolve várias etapas, começando pelo design da interface, que deve ser fácil de usar e esteticamente agradável. É crucial garantir que a agenda seja responsiva e funcione bem em diferentes dispositivos. A lógica de backend deve ser configurada para armazenar e recuperar os dados de maneira eficiente, considerando a possibilidade de integração com outras ferramentas, como calendários externos e notificações.</p>
-          </div>
+            <div class="title-window">
+                <h3>Implementando a agenda</h3>
+            </div>
+            <div class="txt-window">
+                <p>A implementação envolve várias etapas, começando pelo design da interface, que deve ser fácil de usar
+                    e esteticamente agradável. É crucial garantir que a agenda seja responsiva e funcione bem em
+                    diferentes dispositivos. A lógica de backend deve ser configurada para armazenar e recuperar os
+                    dados de maneira eficiente, considerando a possibilidade de integração com outras ferramentas, como
+                    calendários externos e notificações.</p>
+            </div>
         </div>
         <div class="organization-chart" id="myDiagramDiv"></div>
-      </div>      
+    </div>
 
 
     <div class="plano-acao-row">
@@ -63,22 +64,24 @@
         </div>
         <div class="pdf-reander-2">
             <div class="pdf">
-                <pdf-viewer
-                [src]="src2"
-                [zoom]="0.75"
-                style="width: 100%; height: 50rem; position: relative; overflow: hidden; max-height: 50rem;"
-              ></pdf-viewer>
-        </div>
+                <pdf-viewer [src]="src2" [zoom]="0.75"
+                    style="width: 100%; height: 50rem; position: relative; overflow: hidden; max-height: 50rem;"></pdf-viewer>
+            </div>
 
-        <div class="citacao-02">
-            <q>A Agenda 2030
-                é o compromisso global com o desenvolvimento sustentável, assumido
-               em 2015 pelos 193 países membros da Organização das Nações Unidas (ONU), incluindo o
-               Brasil. Esse pacto incorpora e reafirma o assumido no ano 2000, para implementação dos
-               Objetivos do Milênio (ODM), e tem como missão estabelecer um horizonte concreto para o
-               avanço das políticas mundiais de superação da pobreza, da fome, da falta de acesso a serviços
-               básicos e dos desafios socioambientais. Ancorada em cinco princípios indissociáveis (Pessoa,
-               Planeta, Paz, Prosperidade e Parceiras), a Agenda 2030 abarca um conjunto de 17 Objetivos de
-               Desenvolvimento Sustentável (ODS), abaixo dos quais estão estabelecidas as 169 metas.</q>
+            <button (click)="scrollToTop()" class="scroll-top-button" *ngIf="showScrollTop">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+
+
+            <div class="citacao-02">
+                <q>A Agenda 2030
+                    é o compromisso global com o desenvolvimento sustentável, assumido
+                    em 2015 pelos 193 países membros da Organização das Nações Unidas (ONU), incluindo o
+                    Brasil. Esse pacto incorpora e reafirma o assumido no ano 2000, para implementação dos
+                    Objetivos do Milênio (ODM), e tem como missão estabelecer um horizonte concreto para o
+                    avanço das políticas mundiais de superação da pobreza, da fome, da falta de acesso a serviços
+                    básicos e dos desafios socioambientais. Ancorada em cinco princípios indissociáveis (Pessoa,
+                    Planeta, Paz, Prosperidade e Parceiras), a Agenda 2030 abarca um conjunto de 17 Objetivos de
+                    Desenvolvimento Sustentável (ODS), abaixo dos quais estão estabelecidas as 169 metas.</q>
+            </div>
         </div>
-    </div>

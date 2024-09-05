@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, HostListener } from '@angular/core';
 import * as go from 'gojs';
 
 @Component({
@@ -17,6 +17,19 @@ export class AgendaComponent implements AfterViewInit{
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  }
+
+  showScrollTop = false; 
+  
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    this.showScrollTop = scrollPosition > 100; 
+  }
+
+  
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
 

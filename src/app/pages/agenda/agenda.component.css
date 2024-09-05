@@ -65,7 +65,7 @@
 }
 
 .citacao-02 {
-    width: 104rem;
+    width: 84rem;
     margin: 1.5rem;
     padding: 1.5rem;
     text-align: justify;
@@ -133,3 +133,24 @@
 div[style*="visibility: hidden"] {
     display: none !important;
   }
+
+  .scroll-top-button {
+    position: fixed;
+    bottom: 30px;
+    right: 65px;
+    background-color: #151515;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    font-size: 42px;
+    cursor: pointer;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0.7;
+  }
+  
+  .scroll-top-button:hover {
+    opacity: 1;
+  }
+  
