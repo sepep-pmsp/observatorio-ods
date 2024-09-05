@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { DadosService } from '../../../service/dados.service';
 
 @Component({
@@ -32,6 +32,19 @@ export class IndicadoresComponent {
   dadosIndicador: any = {};
 
   constructor(private dadosService: DadosService) {}
+
+  showScrollTop = false; 
+  
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    this.showScrollTop = scrollPosition > 1000; 
+  }
+
+  
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
   ngOnInit() {
     this.dadosService.getData().subscribe(data => {
