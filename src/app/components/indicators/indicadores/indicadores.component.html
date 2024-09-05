@@ -12,20 +12,22 @@
       </div>
       <div *ngFor="let estrategia of estrategias; let i = index" class="grid-estrategia">
         <button class="modal-button" (click)="selectIndicator(estrategia.id)"
-        [ngStyle]="{'box-shadow': getBoxShadow(estrategia.id)}">
+          [ngStyle]="{'box-shadow': getBoxShadow(estrategia.id)}">
           <img [src]="estrategia.imgSrc" alt="Estratégia {{estrategia.id}}">
         </button>
       </div>
     </div>
 
     <app-search-indicators></app-search-indicators>
-  
+
+    <button (click)="scrollToTop()" class="scroll-top-button" *ngIf="showScrollTop">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
     <div class="cards-container">
-      <app-card-indicators 
-        *ngIf="selectedIndicator !== null" 
-        [dados]="dadosIndicador[selectedIndicator]" 
+      <app-card-indicators *ngIf="selectedIndicator !== null" [dados]="dadosIndicador[selectedIndicator]"
         [cor]="getCor(selectedIndicator)">
       </app-card-indicators>
     </div>
-  </div> 
+  </div>
 </div>
