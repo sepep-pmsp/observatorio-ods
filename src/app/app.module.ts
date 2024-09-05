@@ -4,6 +4,7 @@ import { CardModule } from 'primeng/card';
 import { FormsModule } from '@angular/forms';
 import { ChartModule } from 'primeng/chart';
 import { SidebarModule } from 'primeng/sidebar';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { SearchIndicatorsComponent } from './components/indicators/search-indicators/search-indicators.component';
 import { CardIndicatorsComponent } from './components/indicators/card-indicators/card-indicators.component';
 import { GraficIndicatorsComponent } from './components/indicators/grafic-indicators/grafic-indicators.component';
+import { AgendaComponent } from './pages/agenda/agenda.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { GraficIndicatorsComponent } from './components/indicators/grafic-indica
     SearchIndicatorsComponent,
     CardIndicatorsComponent,
     GraficIndicatorsComponent,
+    AgendaComponent,
     
   ],
   imports: [
@@ -42,7 +45,8 @@ import { GraficIndicatorsComponent } from './components/indicators/grafic-indica
     CardModule,
     FormsModule,
     ChartModule,
-    SidebarModule
+    SidebarModule,
+    PdfViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
