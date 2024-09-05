@@ -1,0 +1,135 @@
+.agenda--row {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.agenda-2030-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+    gap: 2rem;
+}
+
+.title-agenda-1 {
+    background-color: #3f3f3f;
+    color: var(--White);
+    margin: 1.5rem;
+    width: 100%;
+    max-width: 85rem;
+    border-radius: 1rem;
+    padding: 1rem 0.5rem 1rem 2rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.title-pdf {
+    background-color: #EFEFEF;
+    margin: 1.5rem;
+    width: 100%;
+    max-width: 85rem;
+    border-radius: 1rem;
+    padding: 1rem 0.5rem 1rem 2rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pdf-reander-1 {
+    width: 88rem;
+}
+
+.pdf-reander-01 {
+    margin: 2rem 0 2rem 0;
+}
+
+.diagram {
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.citacao-01 {
+    width: 104rem;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    text-align: justify;
+}
+
+.citacao-02 {
+    width: 104rem;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    text-align: justify;
+}
+
+.organization-chart {
+    width: 50%;
+    height: 55rem;
+}
+
+.title-window{
+    background-color: #EFEFEF;
+    margin: 1.5rem;
+    width: 100%;
+    max-width: 30rem;
+    border-radius: 1rem;
+    padding: 1rem 0.5rem 1rem 2rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.txt-window{
+    width: 28rem;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    text-align: justify;
+}
+
+.elaboracao{
+    background-color: #EFEFEF;
+    margin: 1.5rem;
+    width: 100%;
+    max-width: 85rem;
+    border-radius: 1rem;
+    padding: 1rem 0.5rem 1rem 2rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pdf-reander-2 {
+    width: 88rem;
+    margin: 2rem 0 2rem 0;
+}
+
+.plano-acao-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+    gap: 2rem;
+}
+
+.btn-download{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+}
+
+div[style*="visibility: hidden"] {
+    display: none !important;
+  }
