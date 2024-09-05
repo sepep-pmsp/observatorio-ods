@@ -80,7 +80,7 @@ def rodar():
     ficha_data = get_ficha_indicadores(indicadores)
     organized_data = organize_indicators(ficha_data)
     save_to_json(organized_data)
-    last_rodou = time.now()
+    last_rodou = time.time()
     print(f"Script finalizado em {datetime.now()}")
 
 
@@ -88,9 +88,9 @@ if __name__ == "__main__":
 
     import time
 
-    #vai rodar de hora em hora
-    #DELAY_SECS = 60*60*1
-    DELAY_SECS=5
+    #vai rodar de 12 hora em 12 hora
+    DELAY_SECS = 60*60*12
+    #DELAY_SECS=5
 
     last_rodou = 0
     rodou_uma_vez = False
@@ -99,13 +99,13 @@ if __name__ == "__main__":
         #vai entrar aqui soh na primeira vez que rodar noi deploy
         if not rodou_uma_vez:
             rodar()
-            last_rodou=time.now()
+            last_rodou=time.time()
             rodou_uma_vez=True
 
-        agora = time.now()
+        agora = time.time()
         tempo_ultima_rodada = agora - last_rodou
         if tempo_ultima_rodada > DELAY_SECS:
             rodar()
-            last_rodou=time.now()
+            last_rodou=time.time()
 
             
