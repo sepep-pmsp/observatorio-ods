@@ -1,23 +1,26 @@
 .news-card {
     display: flex;
     justify-content: center;
-    align-content: space-between;
-    align-items: center;
+    align-content: center;
+    align-items: stretch;
     flex-wrap: wrap;
     width: 100%;
     padding: 1rem;
-    gap: 1rem; 
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
 }
 
 .card {
     width: 100%;
-    max-width: 303px; 
-    border-radius: 0.5rem;
+    max-width: 303px;
+    border-radius: 1rem;
     background-color: #EFEFEF;
     box-shadow: 6px 9px 7px 0px #7070706c;
     border: 1px solid transparent;
-    border-radius: 2rem;
     margin: 1rem;
+    overflow: hidden;
+
 }
 
 .card a {
@@ -31,15 +34,20 @@
 
 .image {
     object-fit: cover;
-    border-radius: 2rem;
-    width: 19rem; 
-    overflow: hidden;
+    border-radius: 1rem;
+
+    width: 100%;
+
+    height: auto;
+
 }
 
-.image-card{
-    width: 19rem;
-    height: 13rem;
-    object-fit: cover; 
+.image-card {
+    width: 100%;
+
+    height: auto;
+
+    object-fit: cover;
 }
 
 .title {
@@ -56,7 +64,7 @@
     line-height: 1.25rem;
 }
 
-.action{
+.action {
     display: flex;
     flex-wrap: nowrap;
     align-content: center;
@@ -64,83 +72,167 @@
     align-items: center;
 }
 
-.desk{
+.desk {
     text-transform: uppercase;
+    background-color: #EFEFEF;
+    background-color: #EFEFEF;
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
-.find-more{
+.find-more {
     padding: 1rem;
 }
 
-@media (max-width: 2376px) and (min-width: 1175px) {
+/* Estilos responsivos */
+
+@media (min-width: 1417px) and (max-width: 1802px) {
     .news-card {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        width: 100rem;
-        align-items: center;
-        flex-wrap: nowrap;
+        width: 200vh;
     }
+
     .card {
-        flex: 1 1 calc(50% - 2rem); 
+        flex: 1 1 calc(25% - 2rem);
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
+    .news-card {
+        width: 195vh;
+    }
+
     .card {
-        flex: 1 1 100%; 
+        flex: 1 1 calc(33% - 2rem);
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 425px) {
     .card {
-        flex: 1 1 100%; 
-        max-width: 184px;
+        flex: 1 1 35%;
     }
 }
 
-.destaques {
-    background-color: #e5e5e5;
-    gap: 1rem;
-    margin: 1rem;
-    width: 100%;
-    max-width: 100rem;
-    border-radius: 1rem;
-    padding: 0.5rem 0.5rem 0.5rem 2rem;
-
+@media (max-width: 320px) {
+    .card {
+        flex: 1 1 30%;
+    }
 }
 
-/* Para telas grandes */
 @media (min-width: 1200px) {
+    .news-card {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .card {
+        flex: 1 1 calc(33% - 2rem);
+    }
+
     .destaques {
         width: 65%;
     }
 }
 
-/* Para telas médias */
-@media (max-width: 1199px) {
+@media (max-width: 1199px) and (min-width: 768px) {
+    .news-card {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 2rem);
+    }
+
     .destaques {
         width: 54rem;
         margin: 0;
     }
 }
 
-/* Para telas pequenas */
 @media (max-width: 768px) {
+    .news-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        flex: 1 1 100%;
+        max-width: 30%;
+    }
+
     .destaques {
         width: 40rem;
         margin: 0;
     }
 }
 
-/* Para telas muito pequenas */
+
 @media (max-width: 480px) {
+    .news-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        flex: 1 1 100%;
+        max-width: 30%;
+    }
+
     .destaques {
         width: 80%;
         padding: 0.5rem;
         margin: 0;
     }
-    h2{
-        font-size: 1rem
+
+    h2 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .news-card {
+        flex-direction: column;
+        align-items: center;
+        width: 120vh;
+    }
+
+    .card {
+        flex: 1 1 100%;
+        max-width: 30%;
+    }
+
+    .destaques {
+        width: 80%;
+        padding: 0.5rem;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .news-card {
+        flex-direction: column;
+        align-items: center;
+        width: 61vh;
+    }
+
+    .card {
+        flex: 1 1 100%;
+        max-width: 30%;
+    }
+
+    .destaques {
+        width: 80%;
+        padding: 0.5rem;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 10px;
     }
 }

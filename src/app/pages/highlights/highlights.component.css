@@ -10,11 +10,11 @@
   flex-direction: column;
 }
 
-.txt--destaque{
+.txt--destaque {
   padding: 1rem;
 }
 
-.highlights--txt{
+.highlights--txt {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -73,6 +73,7 @@
     padding: 0.5rem;
     margin: 0;
   }
+
   h2 {
     font-size: 1rem;
   }
@@ -113,63 +114,127 @@
   cursor: pointer;
 }
 
-textarea:focus, input:focus, select:focus {
-    box-shadow: 0 0 0 0;
-    border: 0 none;
-    outline: 0;
-} 
+textarea:focus,
+input:focus,
+select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
 
-.ppage{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    align-content: center;
-    flex-wrap: nowrap;
-    padding: 0.1rem 0.5rem 0 0;
+.ppage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: center;
+  flex-wrap: nowrap;
+  padding: 0.1rem 0.5rem 0 0;
 }
 
 
 .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .pagination button {
-    margin: 0 10px;
-  }
-  
-
-
-.btn-nextpage{
-    width: 2rem;
-    height: 2rem;
-    background-color: white;
-    border: 1px solid;
-    border-radius: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
-.btn-previuspage{
-    width: 2rem;
-    height: 2rem;
-    background-color: white;
-    border: 1px solid;
-    border-radius: 10rem;
+.pagination button {
+  margin: 0 10px;
+}
+
+
+
+.btn-nextpage {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border: 1px solid;
+  border-radius: 10rem;
+}
+
+.btn-previuspage {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border: 1px solid;
+  border-radius: 10rem;
 }
 
 .btn-previuspage:disabled {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .btn-nextpage:hover {
-    background-color:  #8f8e8e6c;
-    transition: all 0.5s ease-in;
-    z-index: 1;
+  background-color: #8f8e8e6c;
+  transition: all 0.5s ease-in;
+  z-index: 1;
 }
 
 .btn-previuspage:hover {
-    background-color:  #8f8e8e6c;
-    transition: all 0.5s ease-in;
-    z-index: 1;
+  background-color: #8f8e8e6c;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+}
+
+/* Media Queries */
+@media (max-width: 1199px) {
+
+  .title-highlights,
+  .search-highlights {
+    width: 54rem;
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .title-highlights,
+  .search-highlights {
+    width: 40rem;
+    margin: 0;
+    font-size: 1.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+  }
+
+  .search__input {
+    width: 10em;
+  }
+
+  .btn-nextpage,
+  .btn-previuspage {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .title-highlights,
+  .search-highlights {
+    width: 80%;
+    padding: 0.5rem;
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .search__input {
+    width: 8em;
+    font-size: 0.9rem;
+  }
+
+  .search__button {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .btn-nextpage,
+  .btn-previuspage {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }

@@ -1,5 +1,5 @@
 .footer{
-    height: 25rem;
+    height: 30rem;
     color: var(--White);
     background-color: var(--Black);
     margin: 0;
@@ -44,4 +44,96 @@
     list-style-type: none;
     font-size: 2rem;
     margin: 0.8rem;
+}
+
+/* Media Queries */
+@media (min-width: 425px) and (max-width: 1023px) {
+    .images-footer {
+        width: 179vh; 
+        flex-direction: column; 
+        margin: 1rem auto;
+    }
+
+    .logo-ods-claro {
+        width: 16%; 
+        height: 8rem; 
+    }
+
+    .logo-prefeitura-claro{
+        width: 39%; 
+        height: 8rem; 
+    }
+}
+
+@media (min-width: 424px) {
+    .images-footer {
+        width: 67vh;
+        flex-direction: column;
+        margin: 0.5rem auto;
+    }
+
+    .logo-ods-claro {
+        width: 44%;
+        height: 8rem;
+    }
+
+    .logo-prefeitura-claro{
+        width: 104%;
+        height: 8rem;
+    }
+
+    .footer-contact {
+        font-size: 1rem; 
+        margin: 0.4rem;
+    }
+}
+
+@media (min-width: 375px) {
+    .images-footer {
+        width: 55vh;
+        flex-direction: column;
+        margin: 0.1rem auto;
+    }
+
+    .logo-ods-claro {
+        width: 53%;
+        height: 8rem;
+    }
+
+    .logo-prefeitura-claro{
+        width: 111%;
+        height: 8rem;
+    }
+
+    .footer-contact {
+        font-size: 1rem; 
+        margin: 0.4rem;
+    }
+}
+
+@media (min-width: 320px) {
+
+    .footer{
+        height: 7rem;
+    }
+    .images-footer {
+        width: 55vh;
+        flex-direction: column;
+        margin: 0.1rem auto;
+    }
+
+    .logo-ods-claro {
+        width: 0%;
+        height: 0rem;
+    }
+
+    .logo-prefeitura-claro{
+        width: 0%;
+        height: 0rem;
+    }
+
+    .footer-contact {
+        font-size: 1rem; 
+        margin: 0.4rem;
+    }
 }

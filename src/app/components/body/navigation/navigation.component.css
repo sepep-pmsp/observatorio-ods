@@ -119,3 +119,91 @@ a:hover{
   translate: 100% 0; 
   transition: translate 0.2s 0.2s, scale 0s 0.4s; 
 }
+
+/* Para dispositivos móveis */
+@media only screen and (max-width: 600px) {
+  .menu {
+    width: 100%;
+    height: auto;
+    position: static;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    padding: 1rem;
+    top: auto;
+    right: auto;
+  }
+
+  .list {
+    top: auto;
+    position: static;
+    display: block;
+    text-align: center;
+  }
+
+  h6 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Para tablets */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .menu {
+    width: 12rem;
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+  }
+
+  .list {
+    top: 15rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  h6 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Para telas de computador */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  .menu {
+    width: 14rem;
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+  }
+
+  .list {
+    top: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h6 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Para telas ultrawide */
+@media only screen and (min-width: 1441px) {
+  .menu {
+    width: 16rem;
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+  }
+
+  .list {
+    top: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h6 {
+    font-size: 1.6rem;
+  }
+}
