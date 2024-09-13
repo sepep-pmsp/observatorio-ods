@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { NavigationService } from './avigationService';
 
 @Component({
@@ -8,5 +8,5 @@ import { NavigationService } from './avigationService';
 })
 export class NavigationComponent {
 sidebarVisible: any;
-  constructor(public navigationService: NavigationService) { }
+constructor(@Inject(NavigationService) public navigationService: NavigationService) { }
 }
