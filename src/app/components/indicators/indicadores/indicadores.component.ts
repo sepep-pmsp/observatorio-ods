@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { DadosService } from '../../../service/dados.service';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-indicadores',
@@ -30,18 +31,19 @@ export class IndicadoresComponent {
 
   selectedIndicator: string | null = null;
   dadosIndicador: any = {};
-
+  filtro: string = '';
+  selectedIndicator$ = new Subject<string>();
+  
+  
   constructor(private dadosService: DadosService) {}
 
-  showScrollTop = false; 
-  
+  showScrollTop = false;
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    this.showScrollTop = scrollPosition > 1000; 
+    this.showScrollTop = scrollPosition > 1000;
   }
-
-  
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -67,6 +69,10 @@ export class IndicadoresComponent {
   getCor(id: string): string {
     const estrategia = this.estrategias.find(e => e.id === id);
     return estrategia ? estrategia.shadowColor : '#000';
+  }
+
+  updateFilteredData(searchText: string) {
+    this.filtro = searchText;
   }
 }
 

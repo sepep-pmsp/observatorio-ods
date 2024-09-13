@@ -1,10 +1,9 @@
-<div class="card-indicators">
-  <div class="card-indicators-row" *ngFor="let cardData of dados; let i = index">
+<ng-container *ngFor="let cardData of dados; let i = index">
+  <div *ngIf="shouldDisplayCard(cardData)" class="card-indicators-row">
     <p-card [id]="cardData.nm_indicador" 
-        [style]="{border: '3px solid ' + getColor(cardData.nm_indicador),
-        borderRadius: '4rem',
-        backgroundColor: getColor(cardData.nm_indicador) +'0a'
-      }">
+            [style]="{border: '3px solid ' + getColor(cardData.nm_indicador),
+            borderRadius: '4rem',
+            backgroundColor: getColor(cardData.nm_indicador) +'0a'}">
       <div class="card--header" [ngStyle]="{'background-color': getColor(cardData.nm_indicador)}">
         <div class="header-indicador-card">
           <div class="img-card-row">
@@ -48,4 +47,4 @@
       </div>
     </p-card>
   </div>
-</div>
+</ng-container>
