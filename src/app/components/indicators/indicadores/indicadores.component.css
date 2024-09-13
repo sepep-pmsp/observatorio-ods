@@ -63,7 +63,7 @@
 
 /* indicator style  */
 
-.so-widget{
+.so-widget {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,7 +95,7 @@
     border-radius: 2rem;
 }
 
-.cards-container{
+.cards-container {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -117,8 +117,126 @@
     cursor: pointer;
     transition: opacity 2s ease-in-out;
     opacity: 0.7;
-  }
-  
-  .scroll-top-button:hover {
+}
+
+.scroll-top-button:hover {
     opacity: 1;
-  }
+}
+
+/* Media Queries */
+@media (min-width: 1802px) {
+    .tooltip-container {
+        width: 200px;
+        height: 200px;
+        font-size: 18px;
+    }
+
+    .tooltip {
+        width: 14rem;
+    }
+
+    .grid-estrategia {
+        grid-template-columns: repeat(6, auto);
+    }
+}
+
+@media (min-width: 1417px) and (max-width: 1801px) {
+    .tooltip-container {
+        width: 190px;
+        height: 190px;
+        font-size: 17px;
+    }
+
+    .tooltip {
+        width: 13rem;
+    }
+
+    .grid-estrategia {
+        grid-template-columns: repeat(5, auto);
+    }
+}
+
+@media (max-width: 1024px) {
+    .tooltip-container {
+        width: 170px;
+        height: 170px;
+        font-size: 16px;
+    }
+
+    .tooltip {
+        width: 12rem;
+    }
+
+    .grid-estrategia {
+        grid-template-columns: repeat(4, auto);
+    }
+}
+
+@media (max-width: 768px) {
+    .tooltip-container {
+        width: 150px;
+        height: 150px;
+        font-size: 15px;
+    }
+
+    .tooltip {
+        width: 10rem;
+    }
+
+    .grid-estrategia {
+        grid-template-columns: repeat(3, auto);
+    }
+
+    .scroll-top-button {
+        right: 20px;
+        width: 4rem;
+        height: 4rem;
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 425px) {
+    .tooltip-container {
+        width: 130px;
+        height: 130px;
+        font-size: 14px;
+    }
+
+    .tooltip {
+        width: 9rem;
+    }
+
+    .grid-estrategia {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .scroll-top-button {
+        right: 21rem;
+        width: 4rem;
+        height: 4rem;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 320px) {
+    .tooltip-container {
+        width: 120px;
+        height: 120px;
+        font-size: 13px;
+    }
+
+    .tooltip {
+        width: 8rem;
+    }
+
+    .grid-estrategia {
+        grid-template-columns: 1fr;
+    }
+
+    .scroll-top-button {
+        right: 11rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 28px;
+    }
+}

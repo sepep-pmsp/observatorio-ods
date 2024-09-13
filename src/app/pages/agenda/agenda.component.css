@@ -76,7 +76,7 @@
     height: 55rem;
 }
 
-.title-window{
+.title-window {
     background-color: #EFEFEF;
     margin: 1.5rem;
     width: 100%;
@@ -87,14 +87,14 @@
     font-size: 2rem;
 }
 
-.txt-window{
+.txt-window {
     width: 28rem;
     margin: 1.5rem;
     padding: 1.5rem;
     text-align: justify;
 }
 
-.elaboracao{
+.elaboracao {
     background-color: #EFEFEF;
     margin: 1.5rem;
     width: 100%;
@@ -114,7 +114,7 @@
     margin: 2rem 0 2rem 0;
 }
 
-.plano-acao-row{
+.plano-acao-row {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -124,7 +124,7 @@
     gap: 2rem;
 }
 
-.btn-download{
+.btn-download {
     width: 4rem;
     height: 4rem;
     border-radius: 1rem;
@@ -132,9 +132,9 @@
 
 div[style*="visibility: hidden"] {
     display: none !important;
-  }
+}
 
-  .scroll-top-button {
+.scroll-top-button {
     position: fixed;
     bottom: 30px;
     right: 65px;
@@ -148,9 +148,113 @@ div[style*="visibility: hidden"] {
     cursor: pointer;
     transition: opacity 0.5s ease-in-out;
     opacity: 0.7;
-  }
-  
-  .scroll-top-button:hover {
+}
+
+.scroll-top-button:hover {
     opacity: 1;
-  }
-  
+}
+
+/* Media Queries */
+
+@media (max-width: 1024px) {
+
+    .title-agenda-1,
+    .title-pdf,
+    .elaboracao {
+        font-size: 1.5rem;
+        padding: 0.8rem;
+    }
+
+    .citacao-01,
+    .citacao-02 {
+        width: 70rem;
+        font-size: 1.1rem;
+    }
+
+    .pdf-reander-1,
+    .pdf-reander-2 {
+        width: 70rem;
+    }
+
+    .organization-chart {
+        width: 80%;
+        height: 40rem;
+    }
+
+    .txt-window {
+        width: 22rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .title-agenda-1,
+    .title-pdf,
+    .elaboracao {
+        font-size: 1.2rem;
+        padding: 0.6rem;
+    }
+
+    .citacao-01,
+    .citacao-02 {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .pdf-reander-1,
+    .pdf-reander-2 {
+        width: 100%;
+    }
+
+    .organization-chart {
+        width: 100%;
+        height: 30rem;
+    }
+
+    .btn-download {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .txt-window {
+        width: 20rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .title-agenda-1,
+    .title-pdf,
+    .elaboracao {
+        font-size: 1rem;
+        padding: 0.4rem;
+    }
+
+    .citacao-01,
+    .citacao-02 {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .pdf-reander-1,
+    .pdf-reander-2 {
+        width: 100%;
+    }
+
+    .organization-chart {
+        width: 100%;
+        height: 20rem;
+    }
+
+    .btn-download {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .txt-window {
+        width: 18rem;
+        font-size: 0.9rem;
+    }
+}
