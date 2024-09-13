@@ -5,10 +5,9 @@
                 <div class="search">
                     <div class="search-container">
                         <i id="angular-icon" class="pi pi-search" style="font-size: 2rem; color: #8a8989;"></i>
-                        <input type="text" class="input" placeholder="Pesquisar em indicadores">
-                      </div>
+                        <input type="text" class="input" placeholder="Pesquisar em indicadores" (input)="onSearch($event)">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
