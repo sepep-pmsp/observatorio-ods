@@ -123,6 +123,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 1rem;
+        width: 116rem;
     }
 
     .card {

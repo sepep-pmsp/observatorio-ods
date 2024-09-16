@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { NavigationService } from './avigationService';
+import { NavigationService } from './navigationService';
 
 @Component({
   selector: 'app-navigation',
