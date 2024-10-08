@@ -1,5 +1,6 @@
 .grafico-canva {
-  width: 45rem;
+  width: 44rem;
+  height: 24rem;
   border: 1px solid;
   border-radius: 4rem;
   margin: 0.5rem;
@@ -135,21 +136,19 @@
 }
 
 
-@media (max-width: 424px) {
+@media (min-width: 424px) {
   .grafico-canva {
-    width: 95%;
-
-    height: 16rem;
+    width: 44rem;
+    height: 24rem;
 
     margin: 1rem auto;
 
   }
 
   .radio-unidades {
-    flex-direction: column;
+    flex-direction: row;
 
     gap: 0.5rem;
-
   }
 
   .opcoes-select {
