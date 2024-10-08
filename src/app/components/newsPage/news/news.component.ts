@@ -11,19 +11,19 @@ export class NewsComponent {
       "imageUrl": "https://natosafe.com.br/wp-content/uploads/2023/05/objetivos-de-desenvolvimento-susentavel.png",
       "title": "São Paulo avança na implementação dos ODS",
       "description": "A Prefeitura de São Paulo anunciou novos projetos que visam a implementação de políticas sustentáveis em consonância com os ODS.",
-      "link": "https://www.saopaulo.sp.gov.br/noticias/2024/08/sao-paulo-avanca-ods/"
+      "link": "https://www.saopaulo.sp.gov.br/spnoticias/estado-de-sao-paulo-avanca-em-agenda-internacional-de-sustentabilidade/"
     },
     {
       "imageUrl": "https://natosafe.com.br/wp-content/uploads/2023/05/objetivos-de-desenvolvimento-susentavel.png",
       "title": "Virada ODS 2024 traz programação diversificada",
       "description": "A 3ª edição da Virada ODS contará com palestras, oficinas e atividades culturais em São Paulo, visando a conscientização sobre os Objetivos de Desenvolvimento Sustentável.",
-      "link": "https://viradaodssp.sp.gov.br/2024/08/programacao-virada-ods/"
+      "link": "https://viradaodssp.sp.gov.br/"
     },
     {
-      "imageUrl": "https://cdn.awsli.com.br/2500x2500/2298/2298079/produto/153815267/adesivo-brasao-prefeitura-de-sao-paulo-md-998-1-hlbpsh.jpg",
+      "imageUrl": "https://natosafe.com.br/wp-content/uploads/2023/05/objetivos-de-desenvolvimento-susentavel.png",
       "title": "Governo de SP adota novas metas de sustentabilidade",
       "description": "O Governo de São Paulo anunciou novas metas para alcançar os ODS até 2030, focando em educação, saúde e meio ambiente.",
-      "link": "https://www.saopaulo.sp.gov.br/noticias/2024/08/governo-sp-metas-sustentabilidade/"
+      "link": "https://capital.sp.gov.br/noticia/sustentabilidade-sao-paulo-integra-projeto-de-cooperacao-da-onu"
     },
     {
       "imageUrl": "https://natosafe.com.br/wp-content/uploads/2023/05/objetivos-de-desenvolvimento-susentavel.png",

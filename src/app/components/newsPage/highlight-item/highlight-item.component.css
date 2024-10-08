@@ -131,3 +131,26 @@
     font-size: 20px;
     transition: all 0.3s ease-in;
    }
+
+   @media screen and (max-width: 1028px) and (min-width: 767px) {
+
+    .title-highlights {
+      width: 20rem;
+      margin: 0;
+      font-size: 1.5rem;
+      padding: 0.5rem 0.5rem 0.5rem 1rem;
+    }
+  
+    .search__input {
+      width: 10em;
+    }
+  
+    .btn-nextpage,
+    .btn-previuspage {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+    .btn-highlights{
+      width: 10rem;
+    }
+  }

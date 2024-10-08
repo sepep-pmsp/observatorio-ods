@@ -135,11 +135,10 @@
 }
 
 
-@media (max-width: 424px) {
+@media (min-width: 424px) {
   .grafico-canva {
-    width: 95%;
-
-    height: 16rem;
+    width: 25rem;
+    height: 14rem;
 
     margin: 1rem auto;
 
