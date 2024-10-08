@@ -23,7 +23,12 @@ export class GraficIndicatorsComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.filtrarDados(); 
-    this.createBaseChart(); 
+
+    // Automatically select and load "Município" data if available
+    if (this.unidadesTerritoriais.includes('Município')) {
+      this.unidadeSelecionada = 'Município';
+      this.carregarDados();  // Load the data and display the chart
+    }
   }
 
   ngOnDestroy() {
@@ -90,67 +95,18 @@ export class GraficIndicatorsComponent implements OnInit, OnDestroy {
     return this.corIndicador ?? '#E5233D';
   }
 
-  createBaseChart(): void {
-    if (!this.chartCanvas) {
-      return;
-    }
-
-    const ctx = this.chartCanvas.nativeElement.getContext('2d');
-    if (ctx) {
-      const config: ChartConfiguration = {
-        type: 'line',
-        data: {
-          labels: ['Ano'], 
-          datasets: [{
-            label: 'Dados do Indicador (Base)',
-            data: [0], 
-            fill: false,
-            borderColor: this.getColor(),
-            backgroundColor: this.getColor() + '0D',
-            tension: 0.1
-          }]
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: {
-              display: true
-            }
-          },
-          scales: {
-            x: {
-              type: 'category',
-              title: {
-                display: true,
-                text: 'Ano'
-              }
-            },
-            y: {
-              title: {
-                display: true,
-                text: 'Valor'
-              }
-            }
-          }
-        }
-      };
-
-      this.chart = new Chart(ctx, config);
-    }
-  }
-
   createChart(): void {
-    if (!this.chartCanvas) {
-      return;
+    if (!this.chartCanvas || Object.keys(this.dadosSelecionados).length === 0) {
+      return; 
     }
 
     const dadosIndicador = this.dadosSelecionados || {};
     const labels = Object.keys(dadosIndicador).sort();
     const dataValues = labels.map(label => dadosIndicador[label]);
+
     if (labels.length === 0 || dataValues.length === 0) {
       this.destroyChart(); 
-      this.createBaseChart(); 
-      return;
+      return; 
     }
 
     const config: ChartConfiguration = {
