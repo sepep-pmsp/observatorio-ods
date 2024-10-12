@@ -72,7 +72,52 @@ export class IndicadoresComponent {
   }
 
   updateFilteredData(searchText: string) {
-    this.filtro = searchText;
+    this.filtro = searchText.toLowerCase(); 
+  
+    if (!this.filtro) {
+      this.selectedIndicator = null;
+      return;
+    }
+
+    const prioritizedEstrategias = this.estrategias.filter(estrategia => {
+      const indicadorDataList = this.dadosIndicador[estrategia.id]; 
+  
+      if (!indicadorDataList || !Array.isArray(indicadorDataList)) {
+        return false;
+      }
+
+      return indicadorDataList.some(indicadorData => {
+        return indicadorData.nm_indicador?.startsWith(this.filtro);
+      });
+    });
+
+    if (prioritizedEstrategias.length > 0) {
+      this.selectedIndicator = prioritizedEstrategias[0].id;
+      return;
+    }
+
+    const filteredEstrategias = this.estrategias.filter(estrategia => {
+      const indicadorDataList = this.dadosIndicador[estrategia.id];
+  
+      if (!indicadorDataList || !Array.isArray(indicadorDataList)) {
+        return false;
+      }
+
+      return indicadorDataList.some(indicadorData => {
+        return (
+          estrategia.id.includes(this.filtro) ||
+          indicadorData.nm_indicador?.toLowerCase().includes(this.filtro) ||
+          indicadorData.name_indicador?.toLowerCase().includes(this.filtro) ||
+          indicadorData.nm_completo_indicador?.toLowerCase().includes(this.filtro) ||
+          indicadorData.dc_conceito_indicador?.toLowerCase().includes(this.filtro) ||
+          indicadorData.tx_fonte_indicador?.toLowerCase().includes(this.filtro)
+        );
+      });
+    });
+   
+    if (filteredEstrategias.length > 0) {
+      this.selectedIndicator = filteredEstrategias[0].id;
+    } 
   }
-}
+} 
 
