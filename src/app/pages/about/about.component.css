@@ -15,6 +15,9 @@ a{
     align-items: center;
     margin: 2rem;
     padding: 2rem;
+    position: relative;
+    right: 9rem;
+    width: 109rem;
 }
 
 .about{
@@ -39,7 +42,7 @@ a{
     width: 4rem;
     height: 4rem;
     border-radius: 1rem;
-    background-color: #151515;
+    background-color: #3f3f3f;
     border: 1px solid #ffff;
 }
 
@@ -47,7 +50,7 @@ a{
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .pont-img{
@@ -64,7 +67,9 @@ a{
 }
 
 .img-paragraph{
-    width: 25rem;
+    width: 31rem;
+    font-size: 16px;
+    text-align: justify;
 }
 
 .about-txt{
@@ -72,10 +77,61 @@ a{
     padding: 1rem;
     width: 49rem;
     text-align: justify;
-    font-size: 20px;
+    font-size: 23px;
 }
 
-/* Media Queries */
+.img-about{
+    width: 47rem;
+}
+
+.about-row-txt{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    align-content: flex-start;
+    width: 84rem;
+}
+
+.about-txt1,
+.about-txt2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    font-size: 23px;
+    text-align: justify;
+    width: 84rem;
+}
+
+.box-about1,
+.box-about2{
+    background-color: #EFEFEF;
+    color: var(--Black);
+    width: 100%;
+    max-width: 98rem;
+    border-radius: 1rem;
+    padding: 1rem 0.5rem 1rem 2rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+
+.compose{
+    padding: 5px 2px 5px 2px;
+    font-size: 21px;
+    
+    margin: 5px 2px 5px 2px;
+    text-transform: capitalize;
+    font-style: italic;
+}
+
+/* Media Queries
 
 @media (max-width: 1024px) {
     .about {
@@ -159,4 +215,4 @@ a{
     .img-txt {
         font-size: 0.9rem;
     }
-}
+} */

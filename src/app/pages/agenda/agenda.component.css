@@ -3,6 +3,7 @@
     padding: 3rem;
     position: relative;
     right: 4.5rem;
+    width: 85%;
 }
 
 .agenda-2030-row {
@@ -291,4 +292,107 @@
 
 .scroll-top-button:hover {
     opacity: 1;
+}
+
+@media (max-width: 1024px) {
+
+    .title-agenda-1,
+    .title-pdf,
+    .elaboracao {
+        font-size: 1.5rem;
+        padding: 0.8rem;
+    }
+
+    .citacao-01,
+    .citacao-02 {
+        width: 70rem;
+        font-size: 1.1rem;
+    }
+
+    .pdf-reander-1,
+    .pdf-reander-2 {
+        width: 70rem;
+    }
+
+    .organization-chart {
+        width: 80%;
+        height: 40rem;
+    }
+
+    .txt-window {
+        width: 22rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .title-agenda-1,
+    .title-pdf,
+    .elaboracao {
+        font-size: 1.2rem;
+        padding: 0.6rem;
+    }
+
+    .citacao-01,
+    .citacao-02 {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .pdf-reander-1,
+    .pdf-reander-2 {
+        width: 100%;
+    }
+
+    .organization-chart {
+        width: 100%;
+        height: 30rem;
+    }
+
+    .btn-download {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .txt-window {
+        width: 20rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .title-agenda-1,
+    .title-pdf,
+    .elaboracao {
+        font-size: 1rem;
+        padding: 0.4rem;
+    }
+
+    .citacao-01,
+    .citacao-02 {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .pdf-reander-1,
+    .pdf-reander-2 {
+        width: 100%;
+    }
+
+    .organization-chart {
+        width: 100%;
+        height: 20rem;
+    }
+
+    .btn-download {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .txt-window {
+        width: 18rem;
+        font-size: 0.9rem;
+    }
 }
