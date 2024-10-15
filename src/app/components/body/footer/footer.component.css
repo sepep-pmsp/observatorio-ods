@@ -1,5 +1,5 @@
 .footer{
-    height: 30rem;
+    height: 29rem;
     color: var(--White);
     background-color: var(--Black);
     margin: 2rem 0 0 0;
@@ -22,21 +22,27 @@
 .logo-ods-claro{
     background-image: url("../../../../assets/img/logo.png");
     background-size: cover;
-    width: 25.5rem;
-    height: 12.5rem;
+    width: 16.5rem;
+    height: 8.5rem;
 }
 
 .logo-prefeitura-claro{
     background-image: url("../../../../assets/img/logo-prefeitura-claro.png");
     background-size: cover;
-    width: 25.3rem;
-    height: 8.6rem;
+    width: 19.3rem;
+    height: 6.6rem;
 }
 
 .list-footer{
     display: flex;
+    align-items: flex-start;
     flex-direction: row;
-    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: absolute;
+    left: 18rem;
+    gap: 8rem;
+
 }
 
 .footer-contact{
@@ -44,6 +50,10 @@
     list-style-type: none;
     font-size: 2rem;
     margin: 0.8rem;
+}
+
+.footer-contact-01{
+    font-size: 20px;
 }
 
 /* Media Queries */
@@ -140,7 +150,7 @@
 
 @media only screen and (min-width: 1920px) and (max-width: 2605px){
     .footer{
-        height: 30rem;
+        height: 29rem;
         color: var(--White);
         background-color: var(--Black);
         margin: 2rem 0 0 0;
@@ -163,21 +173,26 @@
     .logo-ods-claro{
         background-image: url("../../../../assets/img/logo.png");
         background-size: cover;
-        width: 25.5rem;
-        height: 12.5rem;
+        width: 16.5rem;
+        height: 8.5rem;
     }
     
     .logo-prefeitura-claro{
         background-image: url("../../../../assets/img/logo-prefeitura-claro.png");
         background-size: cover;
-        width: 25.3rem;
-        height: 8.6rem;
+        width: 19.3rem;
+        height: 6.6rem;
     }
     
     .list-footer{
         display: flex;
+        align-items: flex-start;
         flex-direction: row;
-        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: center;
+        position: absolute;
+        left: 18rem;
+        gap: 8rem;
     }
     
     .footer-contact{
