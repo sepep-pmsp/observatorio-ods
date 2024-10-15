@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="card--main">
-        <div class="card-graphic">
+        <div class="card-graphic" *ngIf="cardData.nm_indicador !== '13' && cardData.nm_indicador !== '14'">
           <div class="card-graphic-row">
             <app-grafic-indicators 
               [dados]="dados" 
@@ -33,17 +33,19 @@
             <h5 class="title-card">Descrição:</h5>
             <p class="paragraph-card">{{ cardData.nm_completo_indicador }}</p>
           </div>
-          <div>
-            <h5 class="title-card">Conceitos e definições</h5>
-            <p class="paragraph-card">{{ cardData.dc_conceito_indicador }}</p>
-          </div>
-          <div>
-            <h5 class="title-card">Fórmula de cálculo (em texto)</h5>
-            <p class="paragraph-card">{{ cardData.dc_formula_indicador }}</p>
-          </div>
-          <div>
-            <h5 class="title-card">Fonte</h5>
-            <p class="paragraph-card">{{ cardData.tx_fonte_indicador }}</p>
+          <div *ngIf="cardData.nm_indicador !== '13' && cardData.nm_indicador !== '14'">
+            <div>
+              <h5 class="title-card">Conceitos e definições</h5>
+              <p class="paragraph-card">{{ cardData.dc_conceito_indicador }}</p>
+            </div>
+            <div>
+              <h5 class="title-card">Fórmula de cálculo (em texto)</h5>
+              <p class="paragraph-card">{{ cardData.dc_formula_indicador }}</p>
+            </div>
+            <div>
+              <h5 class="title-card">Fonte</h5>
+              <p class="paragraph-card">{{ cardData.tx_fonte_indicador }}</p>
+            </div>
           </div>
         </div>
       </div>

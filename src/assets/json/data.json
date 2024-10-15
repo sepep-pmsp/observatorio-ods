@@ -56289,6 +56289,20 @@
             "name_indicador": "Acordos e compromissos internacionais firmados pela Prefeitura relacionados à temática de padrões de produção e consumo sustentáveis"
         }
     ],
+    "13":[
+        {
+        "nm_indicador": "13",
+        "name_indicador":"Ação Contra a Mudança Global do Clima",
+        "nm_completo_indicador": "A Ação Contra a Mudança Global do Clima apresenta-se de forma bastante transversal aos demais ODS, com frequência manifestando-se de maneira indissociável. Deste modo, na primeira publicação da Agenda Municipal 2030 (2020) não foram selecionados indicadores específicos. Em 2024 iniciou-se uma processo de atualização da Agenda referentes ao monitoramento dos indicadores de adaptação e mitigação previstas no Plano Municipal de Ação Climática (PlanClima-SP), que será publicado em breve."
+        }
+    ],
+    "14":[
+        {
+            "nm_indicador": "14",
+            "name_indicador":"Vida na Água",
+            "nm_completo_indicador": "As metas do ODS 14 estão relacionadas à proteção, conservação e recuperação dos ecossistemas marinhos e costeiros. A Prefeitura de São Paulo reconhece a importância das referidas temáticas no que concerne a promoção da sustentabilidade das zonas costeiras e dos oceanos, e entende que a proteção da vida marinha é de responsabilidade compartilhada entre todos os governos, não apenas daqueles que se encontram na costa brasileira. Muitas cidades padecem ainda do lançamento irregular de efluentes líquidos, resíduos industriais e resíduos sólidos diretamente ao mar. Entretanto, não são apenas as cidades litorâneas as responsáveis por esse mal. Cidades interioranas podem também contribuir para a alteração do sistema hidrológico e impactar na contaminação e degradação dos oceanos ao poluírem seus corpos hídricos e ar. Ademais, é de ciência a indissociabilidade dos ecossistemas terrestres e aquáticos. Ainda que o município de São Paulo não seja litorâneo e não tenha competência direta para o cumprimento das referidas metas, entende-se que todo tipo de poluição nele gerada - em especial a hídrica e atmosférica -, ou mesmo todo tipo de má gestão de seus recursos naturais, terá como resultado - direto ou indireto - a alteração dos ecossistemas marinhos e costeiros"
+            }
+    ],
     "15": [
         {
             "cd_indicador": 685,
