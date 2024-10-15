@@ -247,9 +247,9 @@ a {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
-  align-items: center; /* Alterado para centralizar verticalmente */
+  align-items: center;
   flex-direction: row;
-  width: 100%; /* Ajustado para se adaptar a diferentes tamanhos de tela */
+  width: 100%; 
   margin: 2rem;
 }
 
@@ -342,7 +342,7 @@ a {
   }
 
   .logo {
-    width: 25rem;
+    width: 20rem;
     max-width: 100%;
   }
 
