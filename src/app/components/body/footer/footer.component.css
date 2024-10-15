@@ -41,7 +41,7 @@
     justify-content: center;
     position: absolute;
     left: 18rem;
-    gap: 8rem;
+    gap: 14rem;
 
 }
 
@@ -192,7 +192,7 @@
         justify-content: center;
         position: absolute;
         left: 18rem;
-        gap: 8rem;
+        gap: 14rem;
     }
     
     .footer-contact{
