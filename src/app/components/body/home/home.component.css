@@ -7,3 +7,8 @@
     align-items: center;
     margin: 1.5rem 0 4rem 0;
 }
+
+.home-page{
+    position: relative;
+    right: 7rem;
+}
