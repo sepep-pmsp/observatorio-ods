@@ -29,6 +29,7 @@ ul, li{
   border: 1px solid rgba( 255, 255, 255, 0.18 );
   padding: 1.5rem;
   color: whitesmoke;
+  z-index: 1;
 }
 
 .list{
@@ -132,6 +133,7 @@ a:hover{
     padding: 1rem;
     top: auto;
     right: auto;
+    z-index: 1;
   }
 
   .list {
@@ -152,6 +154,7 @@ a:hover{
     width: 12rem;
     border-top-left-radius: 5rem;
     border-bottom-left-radius: 5rem;
+    z-index: 1;
   }
 
   .list {
@@ -172,6 +175,7 @@ a:hover{
     width: 14rem;
     border-top-left-radius: 5rem;
     border-bottom-left-radius: 5rem;
+    z-index: 1;
   }
 
   .list {
@@ -193,6 +197,7 @@ a:hover{
     width: 16rem;
     border-top-left-radius: 5rem;
     border-bottom-left-radius: 5rem;
+    z-index: 1;
   }
 
   .list {
